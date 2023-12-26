@@ -1,41 +1,35 @@
 cmake_minimum_required(VERSION 3.12)
 project(PongPP)
 
+# Specify the C++ standard
 set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# SDL2 library information
+find_package(SDL2 REQUIRED)
+find_package(SDL2_image REQUIRED)
+
+# Include directories for SDL2 and SDL_image
+include_directories(PongPP PRIVATE ${SDL2_INCLUDE_DIRS} ${SDL2_IMAGE_INCLUDE_DIRS} include)
+
+# Library directories for SDL2 and SDL_image
+link_directories(PongPP PRIVATE ${SDL2_LIBDIR} ${SDL2_IMAGE_LIBDIR})
 
 # Add your source files here
 set(SOURCES 
-    src/main.cpp
-    src/game.cpp
-    src/player.cpp
-    src/ball.cpp
+    src/Actor.cpp
+    src/AnimSpriteComponent.cpp
+    src/Ball.cpp
+    src/BGSpriteComponent.cpp
+    src/Component.cpp
+    src/Main.cpp
+    src/Math.cpp
+    src/Game.cpp
+    src/SpriteComponent.cpp
 )
 
-# Add your header files here
-set(HEADERS 
-    include/game.h
-    include/player.h
-    include/ball.h
-)
+# Add an executable target
+add_executable(PongPP ${SOURCES})
 
-
-
-# Link your project with third-party libraries
-target_link_libraries(PongPP ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES} )
-
-# Add any additional libraries or dependencies here
-# For example, if you're using SFML:
-# find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
-# SDL2
-find_package(SDL2 REQUIRED)
-include_directories(${SDL2_INCLUDE_DIRS})
-
-# SDL_image
-find_package(SDL2_image REQUIRED)
-include_directories(${SDL2_IMAGE_INCLUDE_DIRS})
-
-add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
-
-# Link any additional libraries or dependencies here
-# For example, if you're using SFML:
-# target_link_libraries(${PROJECT_NAME} sfml-graphics sfml-audio)
+# Link the executable with SDL2 and SDL_image
+target_link_libraries(PongPP PRIVATE ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})
