@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-#include "Math.h"
+#include "Cust_Math.h"
 
 //The "Actor" class is the base class for all the derived characters (ball and paddle)//
 class Actor

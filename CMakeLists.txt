@@ -1,19 +1,25 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.28)
 project(PongPP)
 
-# Specify the C++ standard
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # SDL2 library information
-find_package(SDL2 REQUIRED)
-find_package(SDL2_image REQUIRED)
+set(SDL2_DIR "/opt/homebrew/Cellar/sdl2/2.28.5")
+set(SDL2_INCLUDE_DIR "${SDL2_DIR}/include/SDL2")
+set(SDL2_LIB_DIR "${SDL2_DIR}/lib")
 
-# Include directories for SDL2 and SDL_image
-include_directories(PongPP PRIVATE ${SDL2_INCLUDE_DIRS} ${SDL2_IMAGE_INCLUDE_DIRS} include)
+# SDL_image library information
+set(SDL_IMAGE_DIR "/opt/homebrew/Cellar/sdl2_image/2.8.1")
+set(SDL_IMAGE_INCLUDE_DIR "${SDL_IMAGE_DIR}/include/SDL2")
+set(SDL_IMAGE_LIB_DIR "${SDL_IMAGE_DIR}/lib")
 
-# Library directories for SDL2 and SDL_image
-link_directories(PongPP PRIVATE ${SDL2_LIBDIR} ${SDL2_IMAGE_LIBDIR})
+# Include directories for SDL2, SDL_image, and your project
+include_directories(${SDL2_INCLUDE_DIR} ${SDL_IMAGE_INCLUDE_DIR} "${CMAKE_SOURCE_DIR}/include")
+
+# Find SDL2 and SDL2_image libraries
+find_library(SDL2_LIBRARY NAME SDL2 PATHS ${SDL2_LIB_DIR} NO_DEFAULT_PATH)
+find_library(SDL2_IMAGE_LIBRARY NAME SDL2_image PATHS ${SDL_IMAGE_LIB_DIR} NO_DEFAULT_PATH)
 
 # Add your source files here
 set(SOURCES 
@@ -23,13 +29,14 @@ set(SOURCES
     src/BGSpriteComponent.cpp
     src/Component.cpp
     src/Main.cpp
-    src/Math.cpp
+    src/Cust_Math.cpp
     src/Game.cpp
+    src/Paddle.cpp
     src/SpriteComponent.cpp
 )
 
 # Add an executable target
 add_executable(PongPP ${SOURCES})
 
-# Link the executable with SDL2 and SDL_image
-target_link_libraries(PongPP PRIVATE ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})
+# Link the executable with SDL2 and SDL2_image
+target_link_libraries(PongPP PRIVATE ${SDL2_LIBRARY} ${SDL2_IMAGE_LIBRARY})

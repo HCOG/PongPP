@@ -4,9 +4,9 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/Users/zd1420/Documents/Game dev/PongPP/PongPP" -I"/Users/zd1420/Documents/Game dev/PongPP/PRIVATE" -I/opt/homebrew/include -I"/Users/zd1420/Documents/Game dev/PongPP/include" -isystem /opt/homebrew/include/SDL2
+CXX_INCLUDES = -I/opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.1/include/SDL2 -I"/Users/zd1420/Documents/Game dev/PongPP/include"
 
-CXX_FLAGSarm64 = -std=gnu++11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
+CXX_FLAGSarm64 = -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
 
-CXX_FLAGS = -std=gnu++11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
+CXX_FLAGS = -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
 

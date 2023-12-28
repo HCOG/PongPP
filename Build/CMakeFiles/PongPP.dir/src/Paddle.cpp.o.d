@@ -1,5 +1,6 @@
-CMakeFiles/PongPP.dir/src/Actor.cpp.o: \
-  /Users/zd1420/Documents/Game\ dev/PongPP/src/Actor.cpp \
+CMakeFiles/PongPP.dir/src/Paddle.cpp.o: \
+  /Users/zd1420/Documents/Game\ dev/PongPP/src/Paddle.cpp \
+  /Users/zd1420/Documents/Game\ dev/PongPP/include/Paddle.h \
   /Users/zd1420/Documents/Game\ dev/PongPP/include/Actor.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/copy.h \
@@ -736,7 +737,9 @@ CMakeFiles/PongPP.dir/src/Actor.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__chrono/literals.h \
   /Users/zd1420/Documents/Game\ dev/PongPP/include/Cust_Math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/memory.h \
-  /Users/zd1420/Documents/Game\ dev/PongPP/include/Game.h \
+  /Users/zd1420/Documents/Game\ dev/PongPP/include/AnimSpriteComponent.h \
+  /Users/zd1420/Documents/Game\ dev/PongPP/include/SpriteComponent.h \
+  /Users/zd1420/Documents/Game\ dev/PongPP/include/Component.h \
   /opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2/SDL.h \
   /opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2/SDL_main.h \
   /opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2/SDL_stdinc.h \
@@ -822,8 +825,8 @@ CMakeFiles/PongPP.dir/src/Actor.cpp.o: \
   /opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2/SDL_version.h \
   /opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2/SDL_locale.h \
   /opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2/SDL_misc.h \
+  /Users/zd1420/Documents/Game\ dev/PongPP/include/Game.h \
   /opt/homebrew/Cellar/sdl2_image/2.8.1/include/SDL2/SDL_image.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__ios/fpos.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__string/extern_template_lists.h \
-  /Users/zd1420/Documents/Game\ dev/PongPP/include/Component.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__string/extern_template_lists.h

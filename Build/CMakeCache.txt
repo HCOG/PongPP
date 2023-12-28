@@ -225,6 +225,12 @@ PongPP_SOURCE_DIR:STATIC=/Users/zd1420/Documents/Game dev/PongPP
 //The directory containing a CMake configuration file for SDL2.
 SDL2_DIR:PATH=/opt/homebrew/lib/cmake/SDL2
 
+//Path to a library.
+SDL2_IMAGE_LIBRARY:FILEPATH=/opt/homebrew/Cellar/sdl2_image/2.8.1/lib/libSDL2_image.dylib
+
+//Path to a library.
+SDL2_LIBRARY:FILEPATH=/opt/homebrew/Cellar/sdl2/2.28.5/lib/libSDL2.dylib
+
 //The directory containing a CMake configuration file for SDL2_image.
 SDL2_image_DIR:PATH=/opt/homebrew/lib/cmake/SDL2_image
 

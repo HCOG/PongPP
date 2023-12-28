@@ -1,7 +1,7 @@
 #pragma once
 #include "SpriteComponent.h"
 #include <vector>
-#include "Math.h"
+#include "Cust_Math.h"
 
 //Similar Idea to the animation sprite, for more detail revisit the AnimSprite
 class BGSpriteComponent : public SpriteComponent
@@ -18,6 +18,7 @@ public:
 	void SetScreenSize(const Vector2& size) { mScreenSize = size; }
 	void SetScrollSpeed(float speed) { mScrollSpeed = speed; }
 	float GetScrollSpeed() const { return mScrollSpeed; }
+
 private:
 	// Struct to encapsulate each bg image and its offset
 	struct BGTexture

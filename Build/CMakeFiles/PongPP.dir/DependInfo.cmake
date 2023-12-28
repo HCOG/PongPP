@@ -13,9 +13,10 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/zd1420/Documents/Game dev/PongPP/src/BGSpriteComponent.cpp" "CMakeFiles/PongPP.dir/src/BGSpriteComponent.cpp.o" "gcc" "CMakeFiles/PongPP.dir/src/BGSpriteComponent.cpp.o.d"
   "/Users/zd1420/Documents/Game dev/PongPP/src/Ball.cpp" "CMakeFiles/PongPP.dir/src/Ball.cpp.o" "gcc" "CMakeFiles/PongPP.dir/src/Ball.cpp.o.d"
   "/Users/zd1420/Documents/Game dev/PongPP/src/Component.cpp" "CMakeFiles/PongPP.dir/src/Component.cpp.o" "gcc" "CMakeFiles/PongPP.dir/src/Component.cpp.o.d"
+  "/Users/zd1420/Documents/Game dev/PongPP/src/Cust_Math.cpp" "CMakeFiles/PongPP.dir/src/Cust_Math.cpp.o" "gcc" "CMakeFiles/PongPP.dir/src/Cust_Math.cpp.o.d"
   "/Users/zd1420/Documents/Game dev/PongPP/src/Game.cpp" "CMakeFiles/PongPP.dir/src/Game.cpp.o" "gcc" "CMakeFiles/PongPP.dir/src/Game.cpp.o.d"
   "/Users/zd1420/Documents/Game dev/PongPP/src/Main.cpp" "CMakeFiles/PongPP.dir/src/Main.cpp.o" "gcc" "CMakeFiles/PongPP.dir/src/Main.cpp.o.d"
-  "/Users/zd1420/Documents/Game dev/PongPP/src/Math.cpp" "CMakeFiles/PongPP.dir/src/Math.cpp.o" "gcc" "CMakeFiles/PongPP.dir/src/Math.cpp.o.d"
+  "/Users/zd1420/Documents/Game dev/PongPP/src/Paddle.cpp" "CMakeFiles/PongPP.dir/src/Paddle.cpp.o" "gcc" "CMakeFiles/PongPP.dir/src/Paddle.cpp.o.d"
   "/Users/zd1420/Documents/Game dev/PongPP/src/SpriteComponent.cpp" "CMakeFiles/PongPP.dir/src/SpriteComponent.cpp.o" "gcc" "CMakeFiles/PongPP.dir/src/SpriteComponent.cpp.o.d"
   )
 

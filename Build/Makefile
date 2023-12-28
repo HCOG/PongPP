@@ -249,6 +249,30 @@ src/Component.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/Component.cpp.s
 .PHONY : src/Component.cpp.s
 
+src/Cust_Math.o: src/Cust_Math.cpp.o
+.PHONY : src/Cust_Math.o
+
+# target to build an object file
+src/Cust_Math.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/Cust_Math.cpp.o
+.PHONY : src/Cust_Math.cpp.o
+
+src/Cust_Math.i: src/Cust_Math.cpp.i
+.PHONY : src/Cust_Math.i
+
+# target to preprocess a source file
+src/Cust_Math.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/Cust_Math.cpp.i
+.PHONY : src/Cust_Math.cpp.i
+
+src/Cust_Math.s: src/Cust_Math.cpp.s
+.PHONY : src/Cust_Math.s
+
+# target to generate assembly for a file
+src/Cust_Math.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/Cust_Math.cpp.s
+.PHONY : src/Cust_Math.cpp.s
+
 src/Game.o: src/Game.cpp.o
 .PHONY : src/Game.o
 
@@ -297,29 +321,29 @@ src/Main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/Main.cpp.s
 .PHONY : src/Main.cpp.s
 
-src/Math.o: src/Math.cpp.o
-.PHONY : src/Math.o
+src/Paddle.o: src/Paddle.cpp.o
+.PHONY : src/Paddle.o
 
 # target to build an object file
-src/Math.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/Math.cpp.o
-.PHONY : src/Math.cpp.o
+src/Paddle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/Paddle.cpp.o
+.PHONY : src/Paddle.cpp.o
 
-src/Math.i: src/Math.cpp.i
-.PHONY : src/Math.i
+src/Paddle.i: src/Paddle.cpp.i
+.PHONY : src/Paddle.i
 
 # target to preprocess a source file
-src/Math.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/Math.cpp.i
-.PHONY : src/Math.cpp.i
+src/Paddle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/Paddle.cpp.i
+.PHONY : src/Paddle.cpp.i
 
-src/Math.s: src/Math.cpp.s
-.PHONY : src/Math.s
+src/Paddle.s: src/Paddle.cpp.s
+.PHONY : src/Paddle.s
 
 # target to generate assembly for a file
-src/Math.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/Math.cpp.s
-.PHONY : src/Math.cpp.s
+src/Paddle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/Paddle.cpp.s
+.PHONY : src/Paddle.cpp.s
 
 src/SpriteComponent.o: src/SpriteComponent.cpp.o
 .PHONY : src/SpriteComponent.o
@@ -369,15 +393,18 @@ help:
 	@echo "... src/Component.o"
 	@echo "... src/Component.i"
 	@echo "... src/Component.s"
+	@echo "... src/Cust_Math.o"
+	@echo "... src/Cust_Math.i"
+	@echo "... src/Cust_Math.s"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
 	@echo "... src/Main.o"
 	@echo "... src/Main.i"
 	@echo "... src/Main.s"
-	@echo "... src/Math.o"
-	@echo "... src/Math.i"
-	@echo "... src/Math.s"
+	@echo "... src/Paddle.o"
+	@echo "... src/Paddle.i"
+	@echo "... src/Paddle.s"
 	@echo "... src/SpriteComponent.o"
 	@echo "... src/SpriteComponent.i"
 	@echo "... src/SpriteComponent.s"
