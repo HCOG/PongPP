@@ -1,5 +1,5 @@
 #include "AnimSpriteComponent.h"
-#include "Math.h"
+#include "Cust_Math.h"
 
 /*The constructor will intake the Actor owner's name and draworder, and calls and pass it to 
 the spriteComponent constructor, which will initiate basic Sprite properties, as well pass the 

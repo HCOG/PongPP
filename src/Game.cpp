@@ -1,5 +1,4 @@
 #include "Game.h"
-#include <SDL_image.h>
 #include <algorithm>
 #include "Actor.h"
 #include "SpriteComponent.h"
@@ -263,15 +262,6 @@ SDL_Texture* Game::GetTexture(const std::string& fileName)
 		mTextures.emplace(fileName.c_str(), tex);
 	}
 	return tex;
-}
-
-void Game::Shutdown()
-{
-	UnloadData();
-	IMG_Quit();
-	SDL_DestroyRenderer(mRenderer);
-	SDL_DestroyWindow(mWindow);
-	SDL_Quit();
 }
 
 void Game::AddActor(Actor* actor)

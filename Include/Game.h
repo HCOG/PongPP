@@ -1,5 +1,6 @@
 #pragma once
-#include<SDL2/SDL.h>
+#include <SDL.h>
+#include <SDL_image.h>
 #include <unordered_map>
 #include <string>
 #include <vector>
@@ -24,6 +25,7 @@ public:
 
 	//Load textures needed for sprites
 	SDL_Texture* GetTexture(const std::string& fileName);
+
 private:
 	//Three helper functions that will update each frame to help run the game
 	void ProcessInput();

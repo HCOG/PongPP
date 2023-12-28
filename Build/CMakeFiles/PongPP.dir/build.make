@@ -153,19 +153,19 @@ CMakeFiles/PongPP.dir/src/Main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PongPP.dir/src/Main.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/zd1420/Documents/Game dev/PongPP/src/Main.cpp" -o CMakeFiles/PongPP.dir/src/Main.cpp.s
 
-CMakeFiles/PongPP.dir/src/Math.cpp.o: CMakeFiles/PongPP.dir/flags.make
-CMakeFiles/PongPP.dir/src/Math.cpp.o: /Users/zd1420/Documents/Game\ dev/PongPP/src/Math.cpp
-CMakeFiles/PongPP.dir/src/Math.cpp.o: CMakeFiles/PongPP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/zd1420/Documents/Game dev/PongPP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/PongPP.dir/src/Math.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PongPP.dir/src/Math.cpp.o -MF CMakeFiles/PongPP.dir/src/Math.cpp.o.d -o CMakeFiles/PongPP.dir/src/Math.cpp.o -c "/Users/zd1420/Documents/Game dev/PongPP/src/Math.cpp"
+CMakeFiles/PongPP.dir/src/Cust_Math.cpp.o: CMakeFiles/PongPP.dir/flags.make
+CMakeFiles/PongPP.dir/src/Cust_Math.cpp.o: /Users/zd1420/Documents/Game\ dev/PongPP/src/Cust_Math.cpp
+CMakeFiles/PongPP.dir/src/Cust_Math.cpp.o: CMakeFiles/PongPP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/zd1420/Documents/Game dev/PongPP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/PongPP.dir/src/Cust_Math.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PongPP.dir/src/Cust_Math.cpp.o -MF CMakeFiles/PongPP.dir/src/Cust_Math.cpp.o.d -o CMakeFiles/PongPP.dir/src/Cust_Math.cpp.o -c "/Users/zd1420/Documents/Game dev/PongPP/src/Cust_Math.cpp"
 
-CMakeFiles/PongPP.dir/src/Math.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PongPP.dir/src/Math.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/zd1420/Documents/Game dev/PongPP/src/Math.cpp" > CMakeFiles/PongPP.dir/src/Math.cpp.i
+CMakeFiles/PongPP.dir/src/Cust_Math.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PongPP.dir/src/Cust_Math.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/zd1420/Documents/Game dev/PongPP/src/Cust_Math.cpp" > CMakeFiles/PongPP.dir/src/Cust_Math.cpp.i
 
-CMakeFiles/PongPP.dir/src/Math.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PongPP.dir/src/Math.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/zd1420/Documents/Game dev/PongPP/src/Math.cpp" -o CMakeFiles/PongPP.dir/src/Math.cpp.s
+CMakeFiles/PongPP.dir/src/Cust_Math.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PongPP.dir/src/Cust_Math.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/zd1420/Documents/Game dev/PongPP/src/Cust_Math.cpp" -o CMakeFiles/PongPP.dir/src/Cust_Math.cpp.s
 
 CMakeFiles/PongPP.dir/src/Game.cpp.o: CMakeFiles/PongPP.dir/flags.make
 CMakeFiles/PongPP.dir/src/Game.cpp.o: /Users/zd1420/Documents/Game\ dev/PongPP/src/Game.cpp
@@ -181,10 +181,24 @@ CMakeFiles/PongPP.dir/src/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PongPP.dir/src/Game.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/zd1420/Documents/Game dev/PongPP/src/Game.cpp" -o CMakeFiles/PongPP.dir/src/Game.cpp.s
 
+CMakeFiles/PongPP.dir/src/Paddle.cpp.o: CMakeFiles/PongPP.dir/flags.make
+CMakeFiles/PongPP.dir/src/Paddle.cpp.o: /Users/zd1420/Documents/Game\ dev/PongPP/src/Paddle.cpp
+CMakeFiles/PongPP.dir/src/Paddle.cpp.o: CMakeFiles/PongPP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/zd1420/Documents/Game dev/PongPP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/PongPP.dir/src/Paddle.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PongPP.dir/src/Paddle.cpp.o -MF CMakeFiles/PongPP.dir/src/Paddle.cpp.o.d -o CMakeFiles/PongPP.dir/src/Paddle.cpp.o -c "/Users/zd1420/Documents/Game dev/PongPP/src/Paddle.cpp"
+
+CMakeFiles/PongPP.dir/src/Paddle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PongPP.dir/src/Paddle.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/zd1420/Documents/Game dev/PongPP/src/Paddle.cpp" > CMakeFiles/PongPP.dir/src/Paddle.cpp.i
+
+CMakeFiles/PongPP.dir/src/Paddle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PongPP.dir/src/Paddle.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/zd1420/Documents/Game dev/PongPP/src/Paddle.cpp" -o CMakeFiles/PongPP.dir/src/Paddle.cpp.s
+
 CMakeFiles/PongPP.dir/src/SpriteComponent.cpp.o: CMakeFiles/PongPP.dir/flags.make
 CMakeFiles/PongPP.dir/src/SpriteComponent.cpp.o: /Users/zd1420/Documents/Game\ dev/PongPP/src/SpriteComponent.cpp
 CMakeFiles/PongPP.dir/src/SpriteComponent.cpp.o: CMakeFiles/PongPP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/zd1420/Documents/Game dev/PongPP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/PongPP.dir/src/SpriteComponent.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/zd1420/Documents/Game dev/PongPP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/PongPP.dir/src/SpriteComponent.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PongPP.dir/src/SpriteComponent.cpp.o -MF CMakeFiles/PongPP.dir/src/SpriteComponent.cpp.o.d -o CMakeFiles/PongPP.dir/src/SpriteComponent.cpp.o -c "/Users/zd1420/Documents/Game dev/PongPP/src/SpriteComponent.cpp"
 
 CMakeFiles/PongPP.dir/src/SpriteComponent.cpp.i: cmake_force
@@ -203,8 +217,9 @@ PongPP_OBJECTS = \
 "CMakeFiles/PongPP.dir/src/BGSpriteComponent.cpp.o" \
 "CMakeFiles/PongPP.dir/src/Component.cpp.o" \
 "CMakeFiles/PongPP.dir/src/Main.cpp.o" \
-"CMakeFiles/PongPP.dir/src/Math.cpp.o" \
+"CMakeFiles/PongPP.dir/src/Cust_Math.cpp.o" \
 "CMakeFiles/PongPP.dir/src/Game.cpp.o" \
+"CMakeFiles/PongPP.dir/src/Paddle.cpp.o" \
 "CMakeFiles/PongPP.dir/src/SpriteComponent.cpp.o"
 
 # External object files for target PongPP
@@ -216,13 +231,15 @@ PongPP: CMakeFiles/PongPP.dir/src/Ball.cpp.o
 PongPP: CMakeFiles/PongPP.dir/src/BGSpriteComponent.cpp.o
 PongPP: CMakeFiles/PongPP.dir/src/Component.cpp.o
 PongPP: CMakeFiles/PongPP.dir/src/Main.cpp.o
-PongPP: CMakeFiles/PongPP.dir/src/Math.cpp.o
+PongPP: CMakeFiles/PongPP.dir/src/Cust_Math.cpp.o
 PongPP: CMakeFiles/PongPP.dir/src/Game.cpp.o
+PongPP: CMakeFiles/PongPP.dir/src/Paddle.cpp.o
 PongPP: CMakeFiles/PongPP.dir/src/SpriteComponent.cpp.o
 PongPP: CMakeFiles/PongPP.dir/build.make
-PongPP: /opt/homebrew/lib/libSDL2.dylib
+PongPP: /opt/homebrew/Cellar/sdl2/2.28.5/lib/libSDL2.dylib
+PongPP: /opt/homebrew/Cellar/sdl2_image/2.8.1/lib/libSDL2_image.dylib
 PongPP: CMakeFiles/PongPP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/zd1420/Documents/Game dev/PongPP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable PongPP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/zd1420/Documents/Game dev/PongPP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable PongPP"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PongPP.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
