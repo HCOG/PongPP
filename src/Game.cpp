@@ -181,12 +181,12 @@ void Game::GenerateOutput()
 
 void Game::LoadData()
 {
-	// Create players' paddle
+	// Create player one's paddle
 	LPaddle = new Paddle(this, 0);
 	LPaddle->SetPosition(Vector2(100.0f, 384.0f));
 	LPaddle->SetScale(1.5f);
 
-	// Create players' paddle
+	// Create player two's paddle
 	RPaddle = new Paddle(this, 1);
 	RPaddle->SetPosition(Vector2(900.0f, 384.0f));
 	RPaddle->SetScale(1.5f);
@@ -198,20 +198,10 @@ void Game::LoadData()
 	BGSpriteComponent* bg = new BGSpriteComponent(temp);
 	bg->SetScreenSize(Vector2(1024.0f, 768.0f));
 	std::vector<SDL_Texture*> bgtexs = {
-		GetTexture("Assets/Farback01.png"),
-		GetTexture("Assets/Farback02.png")
+		GetTexture("../Assets/Background.png")
 	};
 	bg->SetBGTextures(bgtexs);
-	bg->SetScrollSpeed(-100.0f);
-	// Create the closer background
-	bg = new BGSpriteComponent(temp, 50);
-	bg->SetScreenSize(Vector2(1024.0f, 768.0f));
-	bgtexs = {
-		GetTexture("Assets/Stars.png"),
-		GetTexture("Assets/Stars.png")
-	};
-	bg->SetBGTextures(bgtexs);
-	bg->SetScrollSpeed(-200.0f);
+	bg->SetScrollSpeed(0.0f);
 }
 
 void Game::UnloadData()

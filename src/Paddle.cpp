@@ -7,7 +7,7 @@ Paddle::Paddle(Game* game,int playernum)
 	, mPlayernum(playernum)
 	, VertiSpeed(0.0f)
 	, RotateSpeed(12.0f)
-	, SlamSpeed(10.f)
+	, SlamSpeed(750.f)
 	, pstate(Moving)
 	, slamdist(0)
 	, RotatedAngle(0)
@@ -15,12 +15,11 @@ Paddle::Paddle(Game* game,int playernum)
 	, W(15)
 {
 	// Create an animated sprite component
-	AnimSpriteComponent* asc = new AnimSpriteComponent(this);
-	std::vector<SDL_Texture*> anims = {
-		game->GetTexture("Assets/Paddle_0.png"),
-		game->GetTexture("Assets/Paddle_1.png"),
+	SpriteComponent* asc = new SpriteComponent(this);
+	SDL_Texture* texture = {
+		game->GetTexture("../Assets/Paddle.png")
 	};
-	asc->SetAnimTextures(anims);
+	asc->SetTexture(texture);
 }
 
 void Paddle::BaseLeftUpdate(Vector2 LPivot)
@@ -61,7 +60,6 @@ void Paddle::ProcessKeyboard(const uint8_t* state)
 		if (state[SDL_SCANCODE_W] && state[SDL_SCANCODE_LSHIFT])
 		{
 			pstate = Slamming;
-			Vector2 opos = GetPosition();
 		}
 	}
 
@@ -117,38 +115,91 @@ void Paddle::UpdateActor(float deltaTime)
 		}
 		SetPosition(pos);
 	}
-
-	if (pstate == LSlapping)
+	if (mPlayernum ==0)
 	{
+		if (pstate == LSlapping)
+		{
+			pstate = Moving;
 
+		}
+			
+		if (pstate == RSlapping)
+		{
+			Vector2 pos = GetPosition();
+			Vector2 pivot = Vector2(pos.x + W, pos.y + H); // pivot at bottom-right
+
+			if (RotatedAngle < 90.f) {
+				// Calculate new position based on rotation
+				float radian = RotatedAngle * M_PI / 180.0f; // Convert to radians
+				pos.x = pivot.x - cos(radian) * W;
+				pos.y = pivot.y - sin(radian) * H;
+
+				RotatedAngle += RotateSpeed * deltaTime;
+			} else {
+				// Reset after rotation
+				RotatedAngle = 0.f;
+				pstate = Moving;
+				// Set pos back to original or new position as needed
+			}
+			SetPosition(pos);
+		}
+
+		if (pstate == Slamming)
+		{
+			Vector2 pos = GetPosition();
+			if (slamdist < 100.f)
+			{
+				pos.x += SlamSpeed * deltaTime;
+				slamdist += SlamSpeed * deltaTime;
+			}
+			else if (slamdist>=100.f && slamdist<200.f)
+			{
+				pos.x -= SlamSpeed * deltaTime;
+				slamdist += SlamSpeed * deltaTime;
+			}
+			else
+			{
+				slamdist = 0.f;
+				pos.x = 100.f;
+				pstate = Moving;
+			}
+			SetPosition(pos);
+		}
 	}
 	
-	if (pstate == RSlapping)
+	if (mPlayernum ==1)
 	{
-
-	}
-
-	if (pstate == Slamming)
-	{
-		Vector2 pos = GetPosition();
-		if (slamdist < 30.f)
+		if (pstate == LSlapping)
 		{
-			pos.x += SlamSpeed * deltaTime;
-			slamdist += SlamSpeed * deltaTime;
-		}
-		else if (slamdist>=30.f && slamdist<60.f)
-		{
-			pos.x -= SlamSpeed * deltaTime;
-			slamdist += SlamSpeed * deltaTime;
-		}
-		else
-		{
-			slamdist = 0.f;
-			pos.x = 100.f;
 			pstate = Moving;
 		}
-		SetPosition(pos);
-	}
+			
+		if (pstate == RSlapping)
+		{
+			pstate = Moving;
+		}
 
+		if (pstate == Slamming)
+		{
+			Vector2 pos = GetPosition();
+			if (slamdist < 100.f)
+			{
+				pos.x -= SlamSpeed * deltaTime;
+				slamdist += SlamSpeed * deltaTime;
+			}
+			else if (slamdist>=100.f && slamdist<200.f)
+			{
+				pos.x += SlamSpeed * deltaTime;
+				slamdist += SlamSpeed * deltaTime;
+			}
+			else
+			{
+				slamdist = 0.f;
+				pos.x = 900.f;
+				pstate = Moving;
+			}
+			SetPosition(pos);
+		}
+	}
 }
 

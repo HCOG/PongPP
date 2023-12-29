@@ -234,6 +234,26 @@ public:
 	{
 		return v - 2.0f * Vector2::Dot(v, n) * n;
 	}
+	
+	static Vector2 RotateAroundPoint(Vector2 point, Vector2 center, float angle) 
+	{
+    // Convert angle to radians
+    float rad = angle * M_PI / 180.0f;
+
+    // Translate point back to the origin
+    point.x -= center.x;
+    point.y -= center.y;
+
+    // Rotate point
+    float rotatedX = point.x * cos(rad) - point.y * sin(rad);
+    float rotatedY = point.x * sin(rad) + point.y * cos(rad);
+
+    // Translate point back to its original position
+    rotatedX += center.x;
+    rotatedY += center.y;
+
+    return Vector2{rotatedX, rotatedY};
+	}
 
 	// Transform vector by matrix
 	static Vector2 Transform(const Vector2& vec, const class Matrix3& mat, float w = 1.0f);

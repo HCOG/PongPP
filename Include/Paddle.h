@@ -1,10 +1,12 @@
 #pragma once
 #include "Actor.h"
+
+//Define a capsule bound box structure for the paddle
 struct CapsuleBB
 {
-	Vector2 L;
-	Vector2 R;
-	float A;
+	Vector2 L;		//Left pivot
+	Vector2 R;		//Right pivot
+	float A;		//Angle
 };
 
 class Paddle : public Actor
@@ -24,10 +26,10 @@ public:
 	void ProcessKeyboard(const uint8_t* state);
 	void UpdateActor(float deltaTime) override;
 
-	float GetVertical() const { return VertiSpeed; }
-	void SetVertical(float Vertical) { VertiSpeed = Vertical;  }
-	float GetRotation() const { return RotateSpeed; }
-	void SetRotate(float Rotation) { VertiSpeed = RotateSpeed; }
+	float GetVerticalSpeed() const { return VertiSpeed; }
+	void SetVerticalSpeed(float Vertical) { VertiSpeed = Vertical;  }
+	float GetRotationSpeed() const { return RotateSpeed; }
+	void SetRotateSpeed(float Rotation) { VertiSpeed = RotateSpeed; }
 
 	void BaseLeftUpdate(Vector2 LPivot);
 	void BaseRightUpdate(Vector2 RPivot);

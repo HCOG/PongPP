@@ -1996,7 +1996,6 @@ CMakeFiles/PongPP.dir/src/BGSpriteComponent.cpp.o: /Users/zd1420/Documents/Game\
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__fwd/subrange.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__fwd/tuple.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__hash_table \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__ios/fpos.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__iterator/access.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__iterator/advance.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__iterator/back_insert_iterator.h \
@@ -2084,7 +2083,6 @@ CMakeFiles/PongPP.dir/src/BGSpriteComponent.cpp.o: /Users/zd1420/Documents/Game\
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__ranges/view_interface.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__split_buffer \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__string/char_traits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__string/extern_template_lists.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__thread/poll_with_backoff.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__thread/timed_backoff_policy.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__threading_support \
@@ -2288,7 +2286,6 @@ CMakeFiles/PongPP.dir/src/BGSpriteComponent.cpp.o: /Users/zd1420/Documents/Game\
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/stdlib.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/string.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/string_view \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/tuple \
@@ -2429,9 +2426,9 @@ CMakeFiles/PongPP.dir/src/BGSpriteComponent.cpp.o: /Users/zd1420/Documents/Game\
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
   /Users/zd1420/Documents/Game\ dev/PongPP/include/Actor.h \
+  /Users/zd1420/Documents/Game\ dev/PongPP/include/BGSpriteComponent.h \
   /Users/zd1420/Documents/Game\ dev/PongPP/include/Component.h \
   /Users/zd1420/Documents/Game\ dev/PongPP/include/Cust_Math.h \
-  /Users/zd1420/Documents/Game\ dev/PongPP/include/Game.h \
   /Users/zd1420/Documents/Game\ dev/PongPP/include/SpriteComponent.h \
   /opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2/SDL.h \
   /opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2/SDL_assert.h \
@@ -2482,8 +2479,7 @@ CMakeFiles/PongPP.dir/src/BGSpriteComponent.cpp.o: /Users/zd1420/Documents/Game\
   /opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2/SDL_version.h \
   /opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2/SDL_video.h \
   /opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2/begin_code.h \
-  /opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2/close_code.h \
-  /opt/homebrew/Cellar/sdl2_image/2.8.1/include/SDL2/SDL_image.h
+  /opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2/close_code.h
 
 CMakeFiles/PongPP.dir/src/Ball.cpp.o: /Users/zd1420/Documents/Game\ dev/PongPP/src/Ball.cpp \
   /Users/zd1420/Documents/Game\ dev/PongPP/include/Ball.h
