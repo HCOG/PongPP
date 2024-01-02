@@ -345,6 +345,30 @@ src/Paddle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/Paddle.cpp.s
 .PHONY : src/Paddle.cpp.s
 
+src/PaddleSpriteComponent.o: src/PaddleSpriteComponent.cpp.o
+.PHONY : src/PaddleSpriteComponent.o
+
+# target to build an object file
+src/PaddleSpriteComponent.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/PaddleSpriteComponent.cpp.o
+.PHONY : src/PaddleSpriteComponent.cpp.o
+
+src/PaddleSpriteComponent.i: src/PaddleSpriteComponent.cpp.i
+.PHONY : src/PaddleSpriteComponent.i
+
+# target to preprocess a source file
+src/PaddleSpriteComponent.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/PaddleSpriteComponent.cpp.i
+.PHONY : src/PaddleSpriteComponent.cpp.i
+
+src/PaddleSpriteComponent.s: src/PaddleSpriteComponent.cpp.s
+.PHONY : src/PaddleSpriteComponent.s
+
+# target to generate assembly for a file
+src/PaddleSpriteComponent.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/PaddleSpriteComponent.cpp.s
+.PHONY : src/PaddleSpriteComponent.cpp.s
+
 src/SpriteComponent.o: src/SpriteComponent.cpp.o
 .PHONY : src/SpriteComponent.o
 
@@ -405,6 +429,9 @@ help:
 	@echo "... src/Paddle.o"
 	@echo "... src/Paddle.i"
 	@echo "... src/Paddle.s"
+	@echo "... src/PaddleSpriteComponent.o"
+	@echo "... src/PaddleSpriteComponent.i"
+	@echo "... src/PaddleSpriteComponent.s"
 	@echo "... src/SpriteComponent.o"
 	@echo "... src/SpriteComponent.i"
 	@echo "... src/SpriteComponent.s"

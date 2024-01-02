@@ -21,6 +21,10 @@ public:
 	int GetTexHeight() const { return mTexHeight; }
 	int GetTexWidth() const { return mTexWidth; }
 
+	//Setters
+	void SetTexHeight(int height) { mTexHeight = height; }
+	void SetTexWidth(int width) { mTexWidth = width; }
+	
 	//Sprite specific component parameters
 protected:
 	SDL_Texture* mTexture;

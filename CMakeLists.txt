@@ -33,6 +33,7 @@ set(SOURCES
     src/Game.cpp
     src/Paddle.cpp
     src/SpriteComponent.cpp
+    src/PaddleSpriteComponent.cpp
 )
 
 # Add an executable target

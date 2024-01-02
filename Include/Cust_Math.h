@@ -255,6 +255,14 @@ public:
     return Vector2{rotatedX, rotatedY};
 	}
 
+	static Vector2 FindNewPoint(const Vector2& startPoint, float angleRadians, float length) 
+	{
+    Vector2 newPoint;
+    newPoint.x = startPoint.x + length * cos(angleRadians);
+    newPoint.y = startPoint.y + length * sin(angleRadians);
+    return newPoint;
+	}
+
 	// Transform vector by matrix
 	static Vector2 Transform(const Vector2& vec, const class Matrix3& mat, float w = 1.0f);
 

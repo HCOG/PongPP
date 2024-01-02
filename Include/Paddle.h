@@ -1,12 +1,12 @@
 #pragma once
 #include "Actor.h"
 
-//Define a capsule bound box structure for the paddle
+/*Define a capsule bound box structure for the paddle, the pivot should be at 7.5,7.5*/
 struct CapsuleBB
 {
 	Vector2 L;		//Left pivot
 	Vector2 R;		//Right pivot
-	float A;		//Angle
+	float A = 0.f;		//Angle
 };
 
 class Paddle : public Actor
@@ -30,10 +30,11 @@ public:
 	void SetVerticalSpeed(float Vertical) { VertiSpeed = Vertical;  }
 	float GetRotationSpeed() const { return RotateSpeed; }
 	void SetRotateSpeed(float Rotation) { VertiSpeed = RotateSpeed; }
+	int GetPstate() const { return pstate; }
+	int GetPlayernum() const { return mPlayernum; }
 
-	void BaseLeftUpdate(Vector2 LPivot);
-	void BaseRightUpdate(Vector2 RPivot);
-	void BaseCenterUpdate(Vector2 Center);
+	Vector2 GetLeftPivot() const { return BB.L; }
+	Vector2 GetRightPivot() const { return BB.R; }
 
 private:
 	float VertiSpeed;				//The speed that the paddle will move vertically
