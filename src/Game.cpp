@@ -184,12 +184,12 @@ void Game::LoadData()
 	// Create player one's paddle
 	LPaddle = new Paddle(this, 0);
 	LPaddle->SetPosition(Vector2(100.0f, 384.0f));
-	LPaddle->SetScale(1.5f);
+	LPaddle->SetScale(1.f);
 
 	// Create player two's paddle
 	RPaddle = new Paddle(this, 1);
 	RPaddle->SetPosition(Vector2(900.0f, 384.0f));
-	RPaddle->SetScale(1.5f);
+	RPaddle->SetScale(1.f);
 
 	// Create actor for the background (this doesn't need a subclass)
 	Actor* temp = new Actor(this);

@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/PongPP.dir/src/Main.cpp.o.d"
   "CMakeFiles/PongPP.dir/src/Paddle.cpp.o"
   "CMakeFiles/PongPP.dir/src/Paddle.cpp.o.d"
+  "CMakeFiles/PongPP.dir/src/PaddleSpriteComponent.cpp.o"
+  "CMakeFiles/PongPP.dir/src/PaddleSpriteComponent.cpp.o.d"
   "CMakeFiles/PongPP.dir/src/SpriteComponent.cpp.o"
   "CMakeFiles/PongPP.dir/src/SpriteComponent.cpp.o.d"
   "PongPP"
