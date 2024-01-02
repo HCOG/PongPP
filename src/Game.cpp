@@ -31,8 +31,8 @@ bool Game::Initialize()
 	//Create windows
 	mWindow = SDL_CreateWindow(
 		"Pong++", //Window title
-		100,  //Top left x-coordinate of window
-		100,  //Top left y-coordinate of window
+		0,  //Top left x-coordinate of window
+		0,  //Top left y-coordinate of window
 		1024, //Width of window
 		768,  //Height of window
 		0     //Flags (0 for no flags set)
