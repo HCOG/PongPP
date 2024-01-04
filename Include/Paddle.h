@@ -6,7 +6,8 @@ struct CapsuleBB
 {
 	Vector2 L;		//Left pivot
 	Vector2 R;		//Right pivot
-	float A = 0.f;		//Angle
+	float radius;	//Radius
+	float A;		//Angle
 };
 
 class Paddle : public Actor
@@ -32,7 +33,9 @@ public:
 	void SetRotateSpeed(float Rotation) { VertiSpeed = RotateSpeed; }
 	int GetPstate() const { return pstate; }
 	int GetPlayernum() const { return mPlayernum; }
-
+	void SetRadius(float Radius) { BB.radius = Radius; }
+	CapsuleBB GetBB() const { return BB; }
+	
 	Vector2 GetLeftPivot() const { return BB.L; }
 	Vector2 GetRightPivot() const { return BB.R; }
 

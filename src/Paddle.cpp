@@ -22,6 +22,7 @@ Paddle::Paddle(Game* game,int playernum)
 	asc->SetTexture(texture);
 	asc->SetTexHeight(H);
 	asc->SetTexWidth(W);
+	SetRadius(9.f);
 }
 
 void Paddle::ProcessKeyboard(const uint8_t* state)
@@ -151,6 +152,8 @@ void Paddle::UpdateActor(float deltaTime)
 				pstate = Moving;
 			}
 			SetPosition(pos);
+			BB.L = Vector2(pos.x, pos.y - 43.f);
+			BB.R = Vector2(pos.x, pos.y + 43.f);
 		}
 
 		else if (pstate == LSlapping || pstate == RSlapping)
@@ -218,6 +221,8 @@ void Paddle::UpdateActor(float deltaTime)
 				pstate = Moving;
 			}
 			SetPosition(pos);
+			BB.L = Vector2(pos.x, pos.y + 43.f);
+			BB.R = Vector2(pos.x, pos.y - 43.f);
 		}
 
 		else if (pstate == LSlapping || pstate == RSlapping)

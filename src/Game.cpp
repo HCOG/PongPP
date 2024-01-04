@@ -191,6 +191,10 @@ void Game::LoadData()
 	RPaddle->SetPosition(Vector2(900.0f, 384.0f));
 	RPaddle->SetScale(1.f);
 
+	ball = new Ball(this, *LPaddle, *RPaddle);
+	ball->SetPosition(Vector2(512.0f, 384.0f));
+	ball->SetScale(1.f);
+
 	// Create actor for the background (this doesn't need a subclass)
 	Actor* temp = new Actor(this);
 	temp->SetPosition(Vector2(512.0f, 384.0f));
