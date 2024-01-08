@@ -22,7 +22,7 @@ Paddle::Paddle(Game* game,int playernum)
 	asc->SetTexture(texture);
 	asc->SetTexHeight(H);
 	asc->SetTexWidth(W);
-	SetRadius(9.f);
+	SetRadius(8.f);
 }
 
 void Paddle::ProcessKeyboard(const uint8_t* state)
@@ -106,8 +106,9 @@ void Paddle::UpdateActor(float deltaTime)
 	{
 		//Set up a boundary for both paddels
 		Vector2 pos = GetPosition();
+		Vector2 NextPos = pos;
 		pos.y += VertiSpeed * deltaTime;
-
+		NextPos.y += 2.f * VertiSpeed * deltaTime;
 		if (pos.y < (H / 2.f))
 		{
 			pos.y = H / 2.f;
@@ -120,13 +121,13 @@ void Paddle::UpdateActor(float deltaTime)
 
 		if (mPlayernum == 0)
 		{
-			BB.L = Vector2(pos.x, pos.y - 43.f);
-			BB.R = Vector2(pos.x, pos.y + 43.f);
+			BB.NL = Vector2(NextPos.x, NextPos.y - 43.f);
+			BB.NR = Vector2(NextPos.x, NextPos.y + 43.f);
 		}
 		else if (mPlayernum == 1)
 		{
-			BB.L = Vector2(pos.x, pos.y + 43.f);
-			BB.R = Vector2(pos.x, pos.y - 43.f);
+			BB.NL = Vector2(NextPos.x, NextPos.y + 43.f);
+			BB.NR = Vector2(NextPos.x, NextPos.y - 43.f);
 		}
 	}
 	
@@ -135,14 +136,18 @@ void Paddle::UpdateActor(float deltaTime)
 		if (pstate == Slamming)
 		{
 			Vector2 pos = GetPosition();
+			Vector2 nextpos = pos;
+			
 			if (slamdist < 100.f)
 			{
 				pos.x += SlamSpeed * deltaTime;
+				nextpos.x += 2.f * SlamSpeed * deltaTime;
 				slamdist += SlamSpeed * deltaTime;
 			}
 			else if (slamdist>=100.f && slamdist<200.f)
 			{
 				pos.x -= SlamSpeed * deltaTime;
+				nextpos.x -= 2.f * SlamSpeed * deltaTime;
 				slamdist += SlamSpeed * deltaTime;
 			}
 			else
@@ -151,17 +156,22 @@ void Paddle::UpdateActor(float deltaTime)
 				pos.x = 100.f;
 				pstate = Moving;
 			}
+			
 			SetPosition(pos);
 			BB.L = Vector2(pos.x, pos.y - 43.f);
 			BB.R = Vector2(pos.x, pos.y + 43.f);
+			BB.NL = Vector2(nextpos.x, nextpos.y - 43.f);
+			BB.NR = Vector2(nextpos.x, nextpos.y + 43.f);
 		}
 
 		else if (pstate == LSlapping || pstate == RSlapping)
 		{
+			float NextA = GetRotation();
 			if (RotatedAngle < 60.f)
 			{
 				RotatedAngle += RotateSpeed * deltaTime;
 				BB.A += RotateSpeed * deltaTime;
+				NextA += 2.f * RotateSpeed * deltaTime;
 				SetRotation(BB.A);
 			}
 
@@ -169,6 +179,7 @@ void Paddle::UpdateActor(float deltaTime)
 			{
 				RotatedAngle += RotateSpeed * deltaTime;
 				BB.A -= RotateSpeed * deltaTime;
+				NextA -= 2.f * RotateSpeed * deltaTime;
 				SetRotation(BB.A);
 			}
 		
@@ -189,12 +200,14 @@ void Paddle::UpdateActor(float deltaTime)
 			if (pstate == LSlapping)
 			{
 				BB.R = Vector2::FindNewPoint(BB.L, Math::ToRadians(90.f-BB.A), 86.f);
+				BB.NR = Vector2::FindNewPoint(BB.L, Math::ToRadians(90.f-NextA), 86.f);
 			}
 
 			else if (pstate == RSlapping)
 			{
 				SetRotation(-BB.A);
 				BB.L = Vector2::FindNewPoint(BB.R, Math::ToRadians(-90.f+BB.A), 86.f);
+				BB.NL = Vector2::FindNewPoint(BB.R, Math::ToRadians(-90.f+NextA), 86.f);
 			}
 		}
 	}
@@ -204,14 +217,17 @@ void Paddle::UpdateActor(float deltaTime)
 		if (pstate == Slamming)
 		{
 			Vector2 pos = GetPosition();
+			Vector2 nextpos = pos;
 			if (slamdist < 100.f)
 			{
 				pos.x -= SlamSpeed * deltaTime;
+				nextpos.x -= 2 * SlamSpeed * deltaTime;
 				slamdist += SlamSpeed * deltaTime;
 			}
 			else if (slamdist>=100.f && slamdist<200.f)
 			{
 				pos.x += SlamSpeed * deltaTime;
+				nextpos.x += SlamSpeed * deltaTime;
 				slamdist += SlamSpeed * deltaTime;
 			}
 			else
@@ -223,6 +239,8 @@ void Paddle::UpdateActor(float deltaTime)
 			SetPosition(pos);
 			BB.L = Vector2(pos.x, pos.y + 43.f);
 			BB.R = Vector2(pos.x, pos.y - 43.f);
+			BB.NL = Vector2(nextpos.x, nextpos.y + 43.f);
+			BB.NR = Vector2(nextpos.x, nextpos.y - 43.f);
 		}
 
 		else if (pstate == LSlapping || pstate == RSlapping)

@@ -6,6 +6,7 @@
 struct SphericBB
 {
 	Vector2 C;		//Center
+    Vector2 NC;     //Next center
     float R;		//Radius
 };
 
@@ -26,17 +27,21 @@ public:
 
     //Getters and setters
     float GetSpeed() const { return V.TS; }
+    float GetRadius() const { return SBB.R; }
 	Vector2 GetDirection() const { return V.D; }
     Vector2 GetCenter() const { return SBB.C; }
+    Vector2 GetNextCenter() const { return SBB.NC; }
     
     void SetDirection(Vector2 Direction) { V.D = Direction; }
     void SetSpeed(float Speed) { V.S = Speed; }
+    void SetTempSpeed(float TempSpeed) { V.TS = TempSpeed; }
     void SetCenter(Vector2 Center) { SBB.C = Center; }
+    void SetNextCenter(Vector2 NextCenter) { SBB.NC = NextCenter; }
     void SetRadius(float Radius) { SBB.R = Radius; }
 
 private:
     Velocity V;                     //The velocity of the ball
-	SphericBB SBB;					//The capsule bound box
+	SphericBB SBB;		            //The capsule bound box for ball
     Paddle& LPaddle;                //The left paddle
     Paddle& RPaddle;                //The right paddle
 };
