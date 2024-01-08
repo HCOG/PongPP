@@ -1,6 +1,7 @@
 #pragma once
 #include "Component.h"
 #include "SDL.h"
+#include "Cust_Math.h"
 
 /*This is a generic Sprite Component. It inherit the basics of the component class,
 which allows it to be add/remove by an actor, and can be further derived to have 
@@ -24,7 +25,7 @@ public:
 	//Setters
 	void SetTexHeight(int height) { mTexHeight = height; }
 	void SetTexWidth(int width) { mTexWidth = width; }
-	
+
 	//Sprite specific component parameters
 protected:
 	SDL_Texture* mTexture;

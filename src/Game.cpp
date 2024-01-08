@@ -31,8 +31,8 @@ bool Game::Initialize()
 	//Create windows
 	mWindow = SDL_CreateWindow(
 		"Pong++", //Window title
-		100,  //Top left x-coordinate of window
-		100,  //Top left y-coordinate of window
+		0,  //Top left x-coordinate of window
+		0,  //Top left y-coordinate of window
 		1024, //Width of window
 		768,  //Height of window
 		0     //Flags (0 for no flags set)
@@ -190,6 +190,10 @@ void Game::LoadData()
 	RPaddle = new Paddle(this, 1);
 	RPaddle->SetPosition(Vector2(900.0f, 384.0f));
 	RPaddle->SetScale(1.f);
+
+	ball = new Ball(this, *LPaddle, *RPaddle);
+	ball->SetPosition(Vector2(512.0f, 384.0f));
+	ball->SetScale(1.f);
 
 	// Create actor for the background (this doesn't need a subclass)
 	Actor* temp = new Actor(this);

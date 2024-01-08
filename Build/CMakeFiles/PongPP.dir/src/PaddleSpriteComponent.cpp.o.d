@@ -338,6 +338,9 @@ CMakeFiles/PongPP.dir/src/PaddleSpriteComponent.cpp.o: \
   /opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2/SDL_version.h \
   /opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2/SDL_locale.h \
   /opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2/SDL_misc.h \
+  /Users/zd1420/Documents/Game\ dev/PongPP/include/Cust_Math.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/cmath \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/memory.h \
   /Users/zd1420/Documents/Game\ dev/PongPP/include/Paddle.h \
   /Users/zd1420/Documents/Game\ dev/PongPP/include/Actor.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/vector \
@@ -488,7 +491,6 @@ CMakeFiles/PongPP.dir/src/PaddleSpriteComponent.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__compare/strong_order.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__bit/bit_cast.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__utility/priority_tag.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__compare/compare_strong_order_fallback.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__compare/compare_weak_order_fallback.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__compare/is_eq.h \
@@ -822,6 +824,4 @@ CMakeFiles/PongPP.dir/src/PaddleSpriteComponent.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__chrono/year_month_day.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__chrono/year_month_weekday.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__chrono/file_clock.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__chrono/literals.h \
-  /Users/zd1420/Documents/Game\ dev/PongPP/include/Cust_Math.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/memory.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__chrono/literals.h

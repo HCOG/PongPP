@@ -6,7 +6,9 @@ struct CapsuleBB
 {
 	Vector2 L;		//Left pivot
 	Vector2 R;		//Right pivot
-	float A = 0.f;		//Angle
+	Vector2 NL, NR; //Next left and right pivot
+	float radius;	//Radius
+	float A;		//Angle
 };
 
 class Paddle : public Actor
@@ -27,14 +29,18 @@ public:
 	void UpdateActor(float deltaTime) override;
 
 	float GetVerticalSpeed() const { return VertiSpeed; }
-	void SetVerticalSpeed(float Vertical) { VertiSpeed = Vertical;  }
 	float GetRotationSpeed() const { return RotateSpeed; }
-	void SetRotateSpeed(float Rotation) { VertiSpeed = RotateSpeed; }
+	float GetRadius() const { return BB.radius; }
 	int GetPstate() const { return pstate; }
 	int GetPlayernum() const { return mPlayernum; }
-
+	CapsuleBB GetBB() const { return BB; }
 	Vector2 GetLeftPivot() const { return BB.L; }
-	Vector2 GetRightPivot() const { return BB.R; }
+	Vector2 GetRightPivot() const { return BB.R; }	
+
+	void SetVerticalSpeed(float Vertical) { VertiSpeed = Vertical;  }
+	void SetRotateSpeed(float Rotation) { VertiSpeed = RotateSpeed; }
+	void SetRadius(float Radius) { BB.radius = Radius; }
+
 
 private:
 	float VertiSpeed;				//The speed that the paddle will move vertically
