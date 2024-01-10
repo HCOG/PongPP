@@ -23,7 +23,7 @@ public:
 
 	Ball(class Game* game, Paddle& LPaddle, Paddle& RPaddle);
 	void UpdateActor(float deltaTime) override;
-    static bool CheckCollisionCapsuleSphere(const CapsuleBB& capsule, const SphericBB& sphere, int playernum);
+    static bool CheckCollisionCapsuleSphere(const CapsuleBB& capsule, const SphericBB& sphere, Vector2& outClosestPoint, int playernum);
 
     //Getters and setters
     float GetSpeed() const { return V.TS; }

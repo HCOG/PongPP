@@ -27,7 +27,7 @@ Ball::Ball(Game* game, Paddle& LPaddle, Paddle& RPaddle)
 /*A modified version of a collision detection code for capsule and sphere bound box. Due
 to the nature of fast flying ball and paddle, I added idea from swept sphere detection model
 to calculate if detection could happen between frames.*/
-bool Ball::CheckCollisionCapsuleSphere(const CapsuleBB& capsule, const SphericBB& sphere, int playernum) 
+bool Ball::CheckCollisionCapsuleSphere(const CapsuleBB& capsule, const SphericBB& sphere, Vector2& outClosestPoint, int playernum) 
 {
     Vector2 start = (playernum == 0) ? capsule.NL : capsule.NR;
     Vector2 end = (playernum == 0) ? capsule.NR : capsule.NL;
@@ -43,6 +43,7 @@ bool Ball::CheckCollisionCapsuleSphere(const CapsuleBB& capsule, const SphericBB
 
     // Find the closest point on the segment to the sphere
     Vector2 closestPoint = start + t * segment;
+    outClosestPoint = closestPoint;
 
     // Check if the closest point is within the sphere
     Vector2 closestPointToSphereCenter = sphere.NC - closestPoint;
@@ -105,10 +106,12 @@ void Ball::UpdateActor(float deltaTime)
     ////////////////////////////////////////////////////////////////////
 
     if (SBB.C.x <= 512.f)
-    {
-        if(CheckCollisionCapsuleSphere(LPaddle.GetBB(), SBB, 0))
+    {   
+        Vector2 closestPoint;
+        if(CheckCollisionCapsuleSphere(LPaddle.GetBB(), SBB, closestPoint,0))
         {
             int pstate = LPaddle.GetPstate();
+            cout<<pstate<<endl;
             Vector2 pos = LPaddle.GetPosition();
 
             //Get the direction of the ball
@@ -119,8 +122,12 @@ void Ball::UpdateActor(float deltaTime)
             if (pstate == Paddle::PState::Moving)
             {
                 //Reverse the direction of the ball
+                BallPos.x = pos.x + LPaddle.GetRadius() + GetRadius();
+                SetPosition(BallPos);
+
                 BallDir.x = -BallDir.x;
                 SetDirection(BallDir);
+                cout<<"Moving"<<endl;
             }
 
             else if (pstate == Paddle::PState::Slamming)
@@ -133,11 +140,37 @@ void Ball::UpdateActor(float deltaTime)
                 SetDirection(BallDir);
                 SetTempSpeed(tempspeed);
             }
+
+            else if (pstate == Paddle::PState::LSlapping || pstate == Paddle::PState::RSlapping)
+            {
+                float rotationAngle = -LPaddle.GetRotation();
+                
+                cout<<rotationAngle<<endl;
+
+                Vector2 reflectedDir = Vector2::DegreeToUnitVector(rotationAngle);
+                cout<<reflectedDir.x<<" "<<reflectedDir.y<<endl;
+                SetDirection(reflectedDir);
+
+                float speed = GetSpeed();
+                speed += 250.f;
+                SetTempSpeed(speed);
+
+                // Update ball direction and position
+                // Calculate the direction from the paddle to the ball
+                Vector2 directionFromPaddleToBall = Vector2::Normalize(SBB.NC - closestPoint);
+
+                // Set the ball's position to be the sum of the paddle's radius, ball's radius and closest point
+                BallPos.x = closestPoint.x + directionFromPaddleToBall.x * (LPaddle.GetRadius() + GetRadius());
+                BallPos.y = closestPoint.y + directionFromPaddleToBall.y * (LPaddle.GetRadius() + GetRadius());
+
+                SetPosition(BallPos);
+            }
         }
     }
     else if (SBB.C.x > 512.f)
     {
-        if (CheckCollisionCapsuleSphere(RPaddle.GetBB(), SBB, 1))
+        Vector2 closestPoint;
+        if (CheckCollisionCapsuleSphere(RPaddle.GetBB(), SBB, closestPoint,1))
         {
             int pstate = RPaddle.GetPstate();
             Vector2 pos = RPaddle.GetPosition();
