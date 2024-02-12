@@ -80,7 +80,15 @@ void Ball::UpdateActor(float deltaTime)
 
     if (SBB.C.y <= SBB.R || SBB.C.y >= (768.f-SBB.R))
     {
-        
+        //Force apply the location to the wall
+        if (SBB.C.y <= SBB.R) {
+            // Force apply the location to just outside the top wall
+            SBB.C.y = SBB.R;
+        } else if (SBB.C.y >= (768.f - SBB.R)) {
+            // Force apply the location to just outside the bottom wall
+            SBB.C.y = 768.f - SBB.R;
+        }
+
         //Get the direction of the ball
         Vector2 BallDir = GetDirection();
 
@@ -92,6 +100,15 @@ void Ball::UpdateActor(float deltaTime)
 
     if (SBB.C.x <= SBB.R || SBB.C.x >= (1024.f-SBB.R))
     {
+        //Force apply the location to the wall
+        if (SBB.C.x <= SBB.R) {
+            // Force apply the location to just outside the top wall
+            SBB.C.x = SBB.R + 0.5f;
+        } else if (SBB.C.x >= (1024.f - SBB.R)) {
+            // Force apply the location to just outside the bottom wall
+            SBB.C.x = 1023.f - SBB.R;
+        }
+
         //Get the direction of the ball
         Vector2 BallDir = GetDirection();
 
@@ -111,7 +128,6 @@ void Ball::UpdateActor(float deltaTime)
         if(CheckCollisionCapsuleSphere(LPaddle.GetBB(), SBB, closestPoint,0))
         {
             int pstate = LPaddle.GetPstate();
-            cout<<pstate<<endl;
             Vector2 pos = LPaddle.GetPosition();
 
             //Get the direction of the ball
@@ -139,12 +155,13 @@ void Ball::UpdateActor(float deltaTime)
                 SetPosition(BallPos);
                 SetDirection(BallDir);
                 SetTempSpeed(tempspeed);
+                cout<<"Slamming"<<endl;
             }
 
             else if (pstate == Paddle::PState::LSlapping || pstate == Paddle::PState::RSlapping)
             {
                 float rotationAngle = -LPaddle.GetRotation();
-                
+                cout<<"Slapping"<<endl;
                 cout<<rotationAngle<<endl;
 
                 Vector2 reflectedDir = Vector2::DegreeToUnitVector(rotationAngle);
