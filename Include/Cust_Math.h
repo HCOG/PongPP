@@ -217,6 +217,19 @@ public:
 		return temp;
 	}
 
+	// Convert degree angle to unit vector
+	static Vector2 DegreeToUnitVector(float angle)
+	{
+		float rad = Math::ToRadians(angle);
+
+		// Calculate x and y components of the unit vector
+		float x = std::cos(rad);
+		float y = std::sin(rad);
+
+		// Return the unit vector
+		return Vector2(x, y);
+	}
+	
 	// Dot product between two vectors (a dot b)
 	static float Dot(const Vector2& a, const Vector2& b)
 	{

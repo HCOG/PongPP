@@ -38,60 +38,34 @@ void Paddle::ProcessKeyboard(const uint8_t* state)
 	//Input set for player one
 	if (mPlayernum == 0)
 	{
-		//Detect moving left or with shift key, slapping left
-		if (state[SDL_SCANCODE_A] && !state[SDL_SCANCODE_LSHIFT])
+		if (state[SDL_SCANCODE_LSHIFT]) 
 		{
-			VertiSpeed -= 300.0f;
-		}
-		else if (state[SDL_SCANCODE_A] && state[SDL_SCANCODE_LSHIFT])
+			if (state[SDL_SCANCODE_A]) {pstate = LSlapping;} 
+			else if (state[SDL_SCANCODE_D]) {pstate = RSlapping;} 
+			else if (state[SDL_SCANCODE_W]) {pstate = Slamming;}
+		} 
+		else 
 		{
-			pstate = LSlapping;
-		}
-
-		//Detct moving right of with shift key, slapping right
-		if (state[SDL_SCANCODE_D] && !state[SDL_SCANCODE_LSHIFT])
-		{
-			VertiSpeed += 300.0f;
-		}
-		else if (state[SDL_SCANCODE_D] && state[SDL_SCANCODE_LSHIFT])
-		{
-			pstate = RSlapping;
-		}
-		
-		//Detect "W" key and shift key, and if so, SLAAAAMMMMMM
-		if (state[SDL_SCANCODE_W] && state[SDL_SCANCODE_LSHIFT])
-		{
-			pstate = Slamming;
+			// Handle vertical movement
+			if (state[SDL_SCANCODE_A]) {VertiSpeed -= 300.0f;}
+			if (state[SDL_SCANCODE_D]) {VertiSpeed += 300.0f;}
 		}
 	}
 
 	//Input set for player two
 	else if (mPlayernum == 1)
 	{
-		//Detect moving left or with shift key, slapping left
-		if (state[SDL_SCANCODE_K] && !state[SDL_SCANCODE_RSHIFT])
+		if (state[SDL_SCANCODE_RSHIFT]) 
 		{
-			VertiSpeed += 300.0f;
-		}
-		else if (state[SDL_SCANCODE_K] && state[SDL_SCANCODE_RSHIFT])
+    		if (state[SDL_SCANCODE_K]) {pstate = LSlapping;} 
+			else if (state[SDL_SCANCODE_SEMICOLON]) {pstate = RSlapping;} 
+			else if (state[SDL_SCANCODE_O]) {pstate = Slamming;}
+		} 
+		else 
 		{
-			pstate = LSlapping;
-		}
-
-		//Detct moving right of with shift key, slapping right
-		if (state[SDL_SCANCODE_SEMICOLON] && !state[SDL_SCANCODE_RSHIFT])
-		{
-			VertiSpeed -= 300.0f;
-		}
-		else if (state[SDL_SCANCODE_SEMICOLON] && state[SDL_SCANCODE_RSHIFT])
-		{
-			pstate = RSlapping;
-		}
-
-		//Detect "O" key and shift key, and if so, SLAAAAMMMMMM
-		if (state[SDL_SCANCODE_O] && state[SDL_SCANCODE_RSHIFT])
-		{
-			pstate = Slamming;
+		// Handle vertical movement
+		if (state[SDL_SCANCODE_K]) {VertiSpeed += 300.0f;}
+		if (state[SDL_SCANCODE_SEMICOLON]) {VertiSpeed -= 300.0f;}
 		}
 	}
 }
@@ -121,11 +95,15 @@ void Paddle::UpdateActor(float deltaTime)
 
 		if (mPlayernum == 0)
 		{
+			BB.L = Vector2(pos.x, pos.y - 43.f);
+			BB.R = Vector2(pos.x, pos.y + 43.f);
 			BB.NL = Vector2(NextPos.x, NextPos.y - 43.f);
 			BB.NR = Vector2(NextPos.x, NextPos.y + 43.f);
 		}
 		else if (mPlayernum == 1)
 		{
+			BB.L = Vector2(pos.x, pos.y + 43.f);
+			BB.R = Vector2(pos.x, pos.y - 43.f);
 			BB.NL = Vector2(NextPos.x, NextPos.y + 43.f);
 			BB.NR = Vector2(NextPos.x, NextPos.y - 43.f);
 		}
