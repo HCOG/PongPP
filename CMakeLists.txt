@@ -14,8 +14,14 @@ set(SDL_IMAGE_DIR "/opt/homebrew/Cellar/sdl2_image/2.8.1")
 set(SDL_IMAGE_INCLUDE_DIR "${SDL_IMAGE_DIR}/include/SDL2")
 set(SDL_IMAGE_LIB_DIR "${SDL_IMAGE_DIR}/lib")
 
+
+# SDL_ttf library information
+set(SDL_TTF_DIR "/opt/homebrew/Cellar/sdl2_ttf/2.22.0")
+set(SDL_TTF_INCLUDE_DIR "${SDL_TTF_DIR}/include/SDL2")
+set(SDL_TTF_LIB_DIR "${SDL_TTF_DIR}/lib")
+
 # Include directories for SDL2, SDL_image, and your project
-include_directories(${SDL2_INCLUDE_DIR} ${SDL_IMAGE_INCLUDE_DIR} "${CMAKE_SOURCE_DIR}/include")
+include_directories(${SDL2_INCLUDE_DIR} ${SDL_IMAGE_INCLUDE_DIR} ${SDL_TTF_INCLUDE_DIR} include)
 
 # Find SDL2 and SDL2_image libraries
 find_library(SDL2_LIBRARY NAME SDL2 PATHS ${SDL2_LIB_DIR} NO_DEFAULT_PATH)

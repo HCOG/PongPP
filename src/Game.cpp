@@ -5,6 +5,7 @@
 #include "BGSpriteComponent.h"
 #include "Paddle.h"
 #include "Ball.h"
+#include "UI.h"
 using namespace std;
 
 //The default constructor will first set member variables to nullptr and IsRunning to true
@@ -26,6 +27,12 @@ bool Game::Initialize()
 	{
 		SDL_Log("Unable to initialize SDL: %s", SDL_GetError());
 		return false;
+	}
+
+	if (TTF_Init() == -1) 
+	{
+    printf("TTF_Init: %s\n", TTF_GetError());
+    // handle error
 	}
 
 	//Create windows
@@ -54,6 +61,8 @@ bool Game::Initialize()
 		return false;
 	}
 
+	UI::UI(SDL_Renderer* renderer, TTF_Font* font) :
+	renderer(renderer), font(font), texture(nullptr), textWidth(0), textHeight(0) 
 	//Initiate SDL_Image
 	if (IMG_Init(IMG_INIT_PNG) == 0)
 	{

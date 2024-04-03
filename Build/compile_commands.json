@@ -1,0 +1,68 @@
+[
+{
+  "directory": "/Users/zd1420/Documents/Game dev/PongPP/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.1/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I\"/Users/zd1420/Documents/Game dev/PongPP/include\" -g -std=gnu++14 -arch arm64 -o CMakeFiles/PongPP.dir/src/Actor.cpp.o -c \"/Users/zd1420/Documents/Game dev/PongPP/src/Actor.cpp\"",
+  "file": "/Users/zd1420/Documents/Game dev/PongPP/src/Actor.cpp",
+  "output": "CMakeFiles/PongPP.dir/src/Actor.cpp.o"
+},
+{
+  "directory": "/Users/zd1420/Documents/Game dev/PongPP/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.1/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I\"/Users/zd1420/Documents/Game dev/PongPP/include\" -g -std=gnu++14 -arch arm64 -o CMakeFiles/PongPP.dir/src/AnimSpriteComponent.cpp.o -c \"/Users/zd1420/Documents/Game dev/PongPP/src/AnimSpriteComponent.cpp\"",
+  "file": "/Users/zd1420/Documents/Game dev/PongPP/src/AnimSpriteComponent.cpp",
+  "output": "CMakeFiles/PongPP.dir/src/AnimSpriteComponent.cpp.o"
+},
+{
+  "directory": "/Users/zd1420/Documents/Game dev/PongPP/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.1/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I\"/Users/zd1420/Documents/Game dev/PongPP/include\" -g -std=gnu++14 -arch arm64 -o CMakeFiles/PongPP.dir/src/Ball.cpp.o -c \"/Users/zd1420/Documents/Game dev/PongPP/src/Ball.cpp\"",
+  "file": "/Users/zd1420/Documents/Game dev/PongPP/src/Ball.cpp",
+  "output": "CMakeFiles/PongPP.dir/src/Ball.cpp.o"
+},
+{
+  "directory": "/Users/zd1420/Documents/Game dev/PongPP/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.1/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I\"/Users/zd1420/Documents/Game dev/PongPP/include\" -g -std=gnu++14 -arch arm64 -o CMakeFiles/PongPP.dir/src/BGSpriteComponent.cpp.o -c \"/Users/zd1420/Documents/Game dev/PongPP/src/BGSpriteComponent.cpp\"",
+  "file": "/Users/zd1420/Documents/Game dev/PongPP/src/BGSpriteComponent.cpp",
+  "output": "CMakeFiles/PongPP.dir/src/BGSpriteComponent.cpp.o"
+},
+{
+  "directory": "/Users/zd1420/Documents/Game dev/PongPP/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.1/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I\"/Users/zd1420/Documents/Game dev/PongPP/include\" -g -std=gnu++14 -arch arm64 -o CMakeFiles/PongPP.dir/src/Component.cpp.o -c \"/Users/zd1420/Documents/Game dev/PongPP/src/Component.cpp\"",
+  "file": "/Users/zd1420/Documents/Game dev/PongPP/src/Component.cpp",
+  "output": "CMakeFiles/PongPP.dir/src/Component.cpp.o"
+},
+{
+  "directory": "/Users/zd1420/Documents/Game dev/PongPP/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.1/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I\"/Users/zd1420/Documents/Game dev/PongPP/include\" -g -std=gnu++14 -arch arm64 -o CMakeFiles/PongPP.dir/src/Main.cpp.o -c \"/Users/zd1420/Documents/Game dev/PongPP/src/Main.cpp\"",
+  "file": "/Users/zd1420/Documents/Game dev/PongPP/src/Main.cpp",
+  "output": "CMakeFiles/PongPP.dir/src/Main.cpp.o"
+},
+{
+  "directory": "/Users/zd1420/Documents/Game dev/PongPP/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.1/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I\"/Users/zd1420/Documents/Game dev/PongPP/include\" -g -std=gnu++14 -arch arm64 -o CMakeFiles/PongPP.dir/src/Cust_Math.cpp.o -c \"/Users/zd1420/Documents/Game dev/PongPP/src/Cust_Math.cpp\"",
+  "file": "/Users/zd1420/Documents/Game dev/PongPP/src/Cust_Math.cpp",
+  "output": "CMakeFiles/PongPP.dir/src/Cust_Math.cpp.o"
+},
+{
+  "directory": "/Users/zd1420/Documents/Game dev/PongPP/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.1/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I\"/Users/zd1420/Documents/Game dev/PongPP/include\" -g -std=gnu++14 -arch arm64 -o CMakeFiles/PongPP.dir/src/Game.cpp.o -c \"/Users/zd1420/Documents/Game dev/PongPP/src/Game.cpp\"",
+  "file": "/Users/zd1420/Documents/Game dev/PongPP/src/Game.cpp",
+  "output": "CMakeFiles/PongPP.dir/src/Game.cpp.o"
+},
+{
+  "directory": "/Users/zd1420/Documents/Game dev/PongPP/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.1/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I\"/Users/zd1420/Documents/Game dev/PongPP/include\" -g -std=gnu++14 -arch arm64 -o CMakeFiles/PongPP.dir/src/Paddle.cpp.o -c \"/Users/zd1420/Documents/Game dev/PongPP/src/Paddle.cpp\"",
+  "file": "/Users/zd1420/Documents/Game dev/PongPP/src/Paddle.cpp",
+  "output": "CMakeFiles/PongPP.dir/src/Paddle.cpp.o"
+},
+{
+  "directory": "/Users/zd1420/Documents/Game dev/PongPP/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.1/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I\"/Users/zd1420/Documents/Game dev/PongPP/include\" -g -std=gnu++14 -arch arm64 -o CMakeFiles/PongPP.dir/src/SpriteComponent.cpp.o -c \"/Users/zd1420/Documents/Game dev/PongPP/src/SpriteComponent.cpp\"",
+  "file": "/Users/zd1420/Documents/Game dev/PongPP/src/SpriteComponent.cpp",
+  "output": "CMakeFiles/PongPP.dir/src/SpriteComponent.cpp.o"
+},
+{
+  "directory": "/Users/zd1420/Documents/Game dev/PongPP/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.1/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I\"/Users/zd1420/Documents/Game dev/PongPP/include\" -g -std=gnu++14 -arch arm64 -o CMakeFiles/PongPP.dir/src/PaddleSpriteComponent.cpp.o -c \"/Users/zd1420/Documents/Game dev/PongPP/src/PaddleSpriteComponent.cpp\"",
+  "file": "/Users/zd1420/Documents/Game dev/PongPP/src/PaddleSpriteComponent.cpp",
+  "output": "CMakeFiles/PongPP.dir/src/PaddleSpriteComponent.cpp.o"
+}
+]

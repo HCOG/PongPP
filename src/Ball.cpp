@@ -77,7 +77,7 @@ void Ball::UpdateActor(float deltaTime)
 	////////////////////////////////////////////////////////////////
     //////////   Check for collision with the wall   ///////////////
     ////////////////////////////////////////////////////////////////
-
+    bool collide_with_wall = false;
     if (SBB.C.y <= SBB.R || SBB.C.y >= (768.f-SBB.R))
     {
         //Force apply the location to the wall
@@ -95,7 +95,7 @@ void Ball::UpdateActor(float deltaTime)
         //Reverse the direction of the ball
         BallDir.y = -BallDir.y;
         SetDirection(BallDir);
-        return;
+        collide_with_wall = true;
     }
 
     if (SBB.C.x <= SBB.R || SBB.C.x >= (1024.f-SBB.R))
@@ -115,9 +115,10 @@ void Ball::UpdateActor(float deltaTime)
         //Reverse the direction of the ball
         BallDir.x = -BallDir.x;
         SetDirection(BallDir);
-        return;
+        collide_with_wall = true;
     }
 
+    if (collide_with_wall) return;
     ////////////////////////////////////////////////////////////////////
     //////////    Check for collision with the paddle   ////////////////
     ////////////////////////////////////////////////////////////////////
