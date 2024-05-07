@@ -64,5 +64,29 @@
   "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.1/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I\"/Users/zd1420/Documents/Game dev/PongPP/include\" -g -std=gnu++14 -arch arm64 -o CMakeFiles/PongPP.dir/src/PaddleSpriteComponent.cpp.o -c \"/Users/zd1420/Documents/Game dev/PongPP/src/PaddleSpriteComponent.cpp\"",
   "file": "/Users/zd1420/Documents/Game dev/PongPP/src/PaddleSpriteComponent.cpp",
   "output": "CMakeFiles/PongPP.dir/src/PaddleSpriteComponent.cpp.o"
+},
+{
+  "directory": "/Users/zd1420/Documents/Game dev/PongPP/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.1/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I\"/Users/zd1420/Documents/Game dev/PongPP/include\" -g -std=gnu++14 -arch arm64 -o CMakeFiles/PongPP.dir/src/DialogBox.cpp.o -c \"/Users/zd1420/Documents/Game dev/PongPP/src/DialogBox.cpp\"",
+  "file": "/Users/zd1420/Documents/Game dev/PongPP/src/DialogBox.cpp",
+  "output": "CMakeFiles/PongPP.dir/src/DialogBox.cpp.o"
+},
+{
+  "directory": "/Users/zd1420/Documents/Game dev/PongPP/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.1/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I\"/Users/zd1420/Documents/Game dev/PongPP/include\" -g -std=gnu++14 -arch arm64 -o CMakeFiles/PongPP.dir/src/Font.cpp.o -c \"/Users/zd1420/Documents/Game dev/PongPP/src/Font.cpp\"",
+  "file": "/Users/zd1420/Documents/Game dev/PongPP/src/Font.cpp",
+  "output": "CMakeFiles/PongPP.dir/src/Font.cpp.o"
+},
+{
+  "directory": "/Users/zd1420/Documents/Game dev/PongPP/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.1/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I\"/Users/zd1420/Documents/Game dev/PongPP/include\" -g -std=gnu++14 -arch arm64 -o CMakeFiles/PongPP.dir/src/PauseMenu.cpp.o -c \"/Users/zd1420/Documents/Game dev/PongPP/src/PauseMenu.cpp\"",
+  "file": "/Users/zd1420/Documents/Game dev/PongPP/src/PauseMenu.cpp",
+  "output": "CMakeFiles/PongPP.dir/src/PauseMenu.cpp.o"
+},
+{
+  "directory": "/Users/zd1420/Documents/Game dev/PongPP/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.1/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I\"/Users/zd1420/Documents/Game dev/PongPP/include\" -g -std=gnu++14 -arch arm64 -o CMakeFiles/PongPP.dir/src/UIScreen.cpp.o -c \"/Users/zd1420/Documents/Game dev/PongPP/src/UIScreen.cpp\"",
+  "file": "/Users/zd1420/Documents/Game dev/PongPP/src/UIScreen.cpp",
+  "output": "CMakeFiles/PongPP.dir/src/UIScreen.cpp.o"
 }
 ]

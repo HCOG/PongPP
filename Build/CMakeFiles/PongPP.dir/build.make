@@ -223,6 +223,62 @@ CMakeFiles/PongPP.dir/src/PaddleSpriteComponent.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PongPP.dir/src/PaddleSpriteComponent.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/zd1420/Documents/Game dev/PongPP/src/PaddleSpriteComponent.cpp" -o CMakeFiles/PongPP.dir/src/PaddleSpriteComponent.cpp.s
 
+CMakeFiles/PongPP.dir/src/DialogBox.cpp.o: CMakeFiles/PongPP.dir/flags.make
+CMakeFiles/PongPP.dir/src/DialogBox.cpp.o: /Users/zd1420/Documents/Game\ dev/PongPP/src/DialogBox.cpp
+CMakeFiles/PongPP.dir/src/DialogBox.cpp.o: CMakeFiles/PongPP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/zd1420/Documents/Game dev/PongPP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/PongPP.dir/src/DialogBox.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PongPP.dir/src/DialogBox.cpp.o -MF CMakeFiles/PongPP.dir/src/DialogBox.cpp.o.d -o CMakeFiles/PongPP.dir/src/DialogBox.cpp.o -c "/Users/zd1420/Documents/Game dev/PongPP/src/DialogBox.cpp"
+
+CMakeFiles/PongPP.dir/src/DialogBox.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PongPP.dir/src/DialogBox.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/zd1420/Documents/Game dev/PongPP/src/DialogBox.cpp" > CMakeFiles/PongPP.dir/src/DialogBox.cpp.i
+
+CMakeFiles/PongPP.dir/src/DialogBox.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PongPP.dir/src/DialogBox.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/zd1420/Documents/Game dev/PongPP/src/DialogBox.cpp" -o CMakeFiles/PongPP.dir/src/DialogBox.cpp.s
+
+CMakeFiles/PongPP.dir/src/Font.cpp.o: CMakeFiles/PongPP.dir/flags.make
+CMakeFiles/PongPP.dir/src/Font.cpp.o: /Users/zd1420/Documents/Game\ dev/PongPP/src/Font.cpp
+CMakeFiles/PongPP.dir/src/Font.cpp.o: CMakeFiles/PongPP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/zd1420/Documents/Game dev/PongPP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/PongPP.dir/src/Font.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PongPP.dir/src/Font.cpp.o -MF CMakeFiles/PongPP.dir/src/Font.cpp.o.d -o CMakeFiles/PongPP.dir/src/Font.cpp.o -c "/Users/zd1420/Documents/Game dev/PongPP/src/Font.cpp"
+
+CMakeFiles/PongPP.dir/src/Font.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PongPP.dir/src/Font.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/zd1420/Documents/Game dev/PongPP/src/Font.cpp" > CMakeFiles/PongPP.dir/src/Font.cpp.i
+
+CMakeFiles/PongPP.dir/src/Font.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PongPP.dir/src/Font.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/zd1420/Documents/Game dev/PongPP/src/Font.cpp" -o CMakeFiles/PongPP.dir/src/Font.cpp.s
+
+CMakeFiles/PongPP.dir/src/PauseMenu.cpp.o: CMakeFiles/PongPP.dir/flags.make
+CMakeFiles/PongPP.dir/src/PauseMenu.cpp.o: /Users/zd1420/Documents/Game\ dev/PongPP/src/PauseMenu.cpp
+CMakeFiles/PongPP.dir/src/PauseMenu.cpp.o: CMakeFiles/PongPP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/zd1420/Documents/Game dev/PongPP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/PongPP.dir/src/PauseMenu.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PongPP.dir/src/PauseMenu.cpp.o -MF CMakeFiles/PongPP.dir/src/PauseMenu.cpp.o.d -o CMakeFiles/PongPP.dir/src/PauseMenu.cpp.o -c "/Users/zd1420/Documents/Game dev/PongPP/src/PauseMenu.cpp"
+
+CMakeFiles/PongPP.dir/src/PauseMenu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PongPP.dir/src/PauseMenu.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/zd1420/Documents/Game dev/PongPP/src/PauseMenu.cpp" > CMakeFiles/PongPP.dir/src/PauseMenu.cpp.i
+
+CMakeFiles/PongPP.dir/src/PauseMenu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PongPP.dir/src/PauseMenu.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/zd1420/Documents/Game dev/PongPP/src/PauseMenu.cpp" -o CMakeFiles/PongPP.dir/src/PauseMenu.cpp.s
+
+CMakeFiles/PongPP.dir/src/UIScreen.cpp.o: CMakeFiles/PongPP.dir/flags.make
+CMakeFiles/PongPP.dir/src/UIScreen.cpp.o: /Users/zd1420/Documents/Game\ dev/PongPP/src/UIScreen.cpp
+CMakeFiles/PongPP.dir/src/UIScreen.cpp.o: CMakeFiles/PongPP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/zd1420/Documents/Game dev/PongPP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/PongPP.dir/src/UIScreen.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PongPP.dir/src/UIScreen.cpp.o -MF CMakeFiles/PongPP.dir/src/UIScreen.cpp.o.d -o CMakeFiles/PongPP.dir/src/UIScreen.cpp.o -c "/Users/zd1420/Documents/Game dev/PongPP/src/UIScreen.cpp"
+
+CMakeFiles/PongPP.dir/src/UIScreen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PongPP.dir/src/UIScreen.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/zd1420/Documents/Game dev/PongPP/src/UIScreen.cpp" > CMakeFiles/PongPP.dir/src/UIScreen.cpp.i
+
+CMakeFiles/PongPP.dir/src/UIScreen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PongPP.dir/src/UIScreen.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/zd1420/Documents/Game dev/PongPP/src/UIScreen.cpp" -o CMakeFiles/PongPP.dir/src/UIScreen.cpp.s
+
 # Object files for target PongPP
 PongPP_OBJECTS = \
 "CMakeFiles/PongPP.dir/src/Actor.cpp.o" \
@@ -235,7 +291,11 @@ PongPP_OBJECTS = \
 "CMakeFiles/PongPP.dir/src/Game.cpp.o" \
 "CMakeFiles/PongPP.dir/src/Paddle.cpp.o" \
 "CMakeFiles/PongPP.dir/src/SpriteComponent.cpp.o" \
-"CMakeFiles/PongPP.dir/src/PaddleSpriteComponent.cpp.o"
+"CMakeFiles/PongPP.dir/src/PaddleSpriteComponent.cpp.o" \
+"CMakeFiles/PongPP.dir/src/DialogBox.cpp.o" \
+"CMakeFiles/PongPP.dir/src/Font.cpp.o" \
+"CMakeFiles/PongPP.dir/src/PauseMenu.cpp.o" \
+"CMakeFiles/PongPP.dir/src/UIScreen.cpp.o"
 
 # External object files for target PongPP
 PongPP_EXTERNAL_OBJECTS =
@@ -251,11 +311,15 @@ PongPP: CMakeFiles/PongPP.dir/src/Game.cpp.o
 PongPP: CMakeFiles/PongPP.dir/src/Paddle.cpp.o
 PongPP: CMakeFiles/PongPP.dir/src/SpriteComponent.cpp.o
 PongPP: CMakeFiles/PongPP.dir/src/PaddleSpriteComponent.cpp.o
+PongPP: CMakeFiles/PongPP.dir/src/DialogBox.cpp.o
+PongPP: CMakeFiles/PongPP.dir/src/Font.cpp.o
+PongPP: CMakeFiles/PongPP.dir/src/PauseMenu.cpp.o
+PongPP: CMakeFiles/PongPP.dir/src/UIScreen.cpp.o
 PongPP: CMakeFiles/PongPP.dir/build.make
 PongPP: /opt/homebrew/Cellar/sdl2/2.28.5/lib/libSDL2.dylib
 PongPP: /opt/homebrew/Cellar/sdl2_image/2.8.1/lib/libSDL2_image.dylib
 PongPP: CMakeFiles/PongPP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/zd1420/Documents/Game dev/PongPP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable PongPP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/zd1420/Documents/Game dev/PongPP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable PongPP"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PongPP.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

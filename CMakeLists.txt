@@ -40,6 +40,11 @@ set(SOURCES
     src/Paddle.cpp
     src/SpriteComponent.cpp
     src/PaddleSpriteComponent.cpp
+    src/DialogBox.cpp
+    src/Font.cpp
+    src/PauseMenu.cpp
+    src/UIScreen.cpp
+    src/HUD.cpp
 )
 
 # Add an executable target

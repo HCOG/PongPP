@@ -83,10 +83,12 @@ void Ball::UpdateActor(float deltaTime)
         //Force apply the location to the wall
         if (SBB.C.y <= SBB.R) {
             // Force apply the location to just outside the top wall
-            SBB.C.y = SBB.R;
+            cout<<"Collide with top wall"<<endl;
+            BallPos.y = SBB.R + 2.f;
         } else if (SBB.C.y >= (768.f - SBB.R)) {
             // Force apply the location to just outside the bottom wall
-            SBB.C.y = 768.f - SBB.R;
+            cout<<"Collide with bottom wall"<<endl;
+            BallPos.y = 766.f - SBB.R;
         }
 
         //Get the direction of the ball
@@ -95,6 +97,8 @@ void Ball::UpdateActor(float deltaTime)
         //Reverse the direction of the ball
         BallDir.y = -BallDir.y;
         SetDirection(BallDir);
+        SetCenter(BallPos);
+        SetPosition(BallPos);
         collide_with_wall = true;
     }
 
@@ -102,23 +106,34 @@ void Ball::UpdateActor(float deltaTime)
     {
         //Force apply the location to the wall
         if (SBB.C.x <= SBB.R) {
-            // Force apply the location to just outside the top wall
-            SBB.C.x = SBB.R + 0.5f;
+            // Force apply the location to just outside the left wall
+            cout<<"Collide with left wall"<<endl;
+            BallPos.x = SBB.R + 2.f;
         } else if (SBB.C.x >= (1024.f - SBB.R)) {
-            // Force apply the location to just outside the bottom wall
-            SBB.C.x = 1023.f - SBB.R;
+            // Force apply the location to just outside the right wall
+            cout<<"Collide with right wall"<<endl;
+            BallPos.x = 1022.f - SBB.R;
         }
 
+        if (SBB.C.y >=284 && SBB.C.y <= 484)
+        { 
+            this->SetState(Actor::EDead);
+            cout<<"Ball is dead"<<endl;
+            return;
+        }
         //Get the direction of the ball
         Vector2 BallDir = GetDirection();
 
         //Reverse the direction of the ball
         BallDir.x = -BallDir.x;
         SetDirection(BallDir);
+        SetCenter(BallPos);
+        SetPosition(BallPos);
         collide_with_wall = true;
     }
 
     if (collide_with_wall) return;
+    
     ////////////////////////////////////////////////////////////////////
     //////////    Check for collision with the paddle   ////////////////
     ////////////////////////////////////////////////////////////////////
@@ -139,17 +154,22 @@ void Ball::UpdateActor(float deltaTime)
             if (pstate == Paddle::PState::Moving)
             {
                 //Reverse the direction of the ball
-                BallPos.x = pos.x + LPaddle.GetRadius() + GetRadius();
-                SetPosition(BallPos);
-
                 BallDir.x = -BallDir.x;
                 SetDirection(BallDir);
+                
+                //Hardcoded value to prevent the ball from getting stuck
+                if(BallPos.x<100.f)
+                    BallPos.x = pos.x - LPaddle.GetRadius() - GetRadius();
+                else
+                    BallPos.x = pos.x + LPaddle.GetRadius() + GetRadius();
+                SetPosition(BallPos);
+
                 cout<<"Moving"<<endl;
             }
 
             else if (pstate == Paddle::PState::Slamming)
             {
-                BallPos.x = pos.x + LPaddle.GetRadius() + GetRadius();
+                BallPos.x = pos.x + LPaddle.GetRadius() + GetRadius() +40.f;
                 BallDir.x = -BallDir.x;
                 tempspeed += 150.f;
 
@@ -178,45 +198,83 @@ void Ball::UpdateActor(float deltaTime)
                 Vector2 directionFromPaddleToBall = Vector2::Normalize(SBB.NC - closestPoint);
 
                 // Set the ball's position to be the sum of the paddle's radius, ball's radius and closest point
-                BallPos.x = closestPoint.x + directionFromPaddleToBall.x * (LPaddle.GetRadius() + GetRadius());
-                BallPos.y = closestPoint.y + directionFromPaddleToBall.y * (LPaddle.GetRadius() + GetRadius());
+                BallPos.x = closestPoint.x + directionFromPaddleToBall.x * (LPaddle.GetRadius() + GetRadius())*2.f;
+                BallPos.y = closestPoint.y + directionFromPaddleToBall.y * (LPaddle.GetRadius() + GetRadius())*2.f;
+
+                // BallPos.y = pstate == Paddle::PState::LSlapping ? BallPos.y - 25.f : BallPos.y + 25.f;
 
                 SetPosition(BallPos);
             }
         }
     }
     else if (SBB.C.x > 512.f)
+{
+    Vector2 closestPoint;
+    if (CheckCollisionCapsuleSphere(RPaddle.GetBB(), SBB, closestPoint, 1))
     {
-        Vector2 closestPoint;
-        if (CheckCollisionCapsuleSphere(RPaddle.GetBB(), SBB, closestPoint,1))
+        int pstate = RPaddle.GetPstate();
+        Vector2 pos = RPaddle.GetPosition();
+
+        // Get the direction of the ball
+        Vector2 BallDir = GetDirection();
+        Vector2 BallPos = GetPosition();
+        float tempspeed = GetSpeed();
+
+        if (pstate == Paddle::PState::Moving)
         {
-            int pstate = RPaddle.GetPstate();
-            Vector2 pos = RPaddle.GetPosition();
+            //Reverse the direction of the ball
+            BallDir.x = -BallDir.x;
+            SetDirection(BallDir);
+            
+            //Hardcoded value to prevent the ball from getting stuck
+            if(BallPos.x<900.f)
+                BallPos.x = pos.x - LPaddle.GetRadius() - GetRadius();
+            else
+                BallPos.x = pos.x + LPaddle.GetRadius() + GetRadius();
+            SetPosition(BallPos);
+            
+            cout<<"Moving"<<endl;
+        }
+        else if (pstate == Paddle::PState::Slamming)
+        {
+            BallPos.x = pos.x - RPaddle.GetRadius() - GetRadius();
+            BallDir.x = -BallDir.x;
+            tempspeed += 150.f;
 
-            //Get the direction of the ball
-            Vector2 BallDir = GetDirection();
-            Vector2 BallPos = GetPosition();
-            float tempspeed = GetSpeed();
+            SetPosition(BallPos);
+            SetDirection(BallDir);
+            SetTempSpeed(tempspeed);
+            cout << "Slamming" << endl;
+        }
+        else if (pstate == Paddle::PState::LSlapping || pstate == Paddle::PState::RSlapping)
+        {
+            float rotationAngle = RPaddle.GetRotation();
+            cout << "Slapping" << endl;
+            cout << rotationAngle << endl;
 
-            if (pstate == Paddle::PState::Moving)
-            {
-                //Reverse the direction of the ball
-                BallDir.x = -BallDir.x;
-                SetDirection(BallDir);
-            }
+            Vector2 reflectedDir = Vector2::DegreeToUnitVector(rotationAngle);
+            reflectedDir.x = -reflectedDir.x;
+            cout << reflectedDir.x << " " << reflectedDir.y << endl;
+            SetDirection(reflectedDir);
 
-            else if (pstate == Paddle::PState::Slamming)
-            {
-                BallPos.x = pos.x - RPaddle.GetRadius() - GetRadius();
-                BallDir.x = -BallDir.x;
-                tempspeed += 150.f;
+            float speed = GetSpeed();
+            speed += 250.f;
+            SetTempSpeed(speed);
 
-                SetPosition(BallPos);
-                SetDirection(BallDir);
-                SetTempSpeed(tempspeed);
-            }
+            // Update ball direction and position
+            // Calculate the direction from the paddle to the ball
+            Vector2 directionFromPaddleToBall = Vector2::Normalize(SBB.NC - closestPoint);
+
+            // Set the ball's position to be the sum of the paddle's radius, ball's radius, and closest point
+            BallPos.x = closestPoint.x - directionFromPaddleToBall.x * (RPaddle.GetRadius() + GetRadius())*2.f;
+            BallPos.y = closestPoint.y - directionFromPaddleToBall.y * (RPaddle.GetRadius() + GetRadius())*2.f;
+
+            // BallPos.y = pstate == Paddle::PState::LSlapping ? BallPos.y + 25.f : BallPos.y - 25.f;
+            SetPosition(BallPos);
         }
     }
+}
+
 }
 
 

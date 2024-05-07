@@ -29,11 +29,11 @@ bool Game::Initialize()
 		return false;
 	}
 
-	if (TTF_Init() == -1) 
-	{
-    printf("TTF_Init: %s\n", TTF_GetError());
-    // handle error
-	}
+	// if (TTF_Init() == -1) 
+	// {
+    // printf("TTF_Init: %s\n", TTF_GetError());
+    // // handle error
+	// }
 
 	//Create windows
 	mWindow = SDL_CreateWindow(
@@ -61,14 +61,14 @@ bool Game::Initialize()
 		return false;
 	}
 
-	UI::UI(SDL_Renderer* renderer, TTF_Font* font) :
-	renderer(renderer), font(font), texture(nullptr), textWidth(0), textHeight(0) 
-	//Initiate SDL_Image
-	if (IMG_Init(IMG_INIT_PNG) == 0)
-	{
-		SDL_Log("Unable to initialize SDL_image: %s", SDL_GetError());
-		return false;
-	}
+	// UI::UI(SDL_Renderer* renderer, TTF_Font* font) :
+	// renderer(renderer), font(font), texture(nullptr), textWidth(0), textHeight(0) 
+	// //Initiate SDL_Image
+	// if (IMG_Init(IMG_INIT_PNG) == 0)
+	// {
+	// 	SDL_Log("Unable to initialize SDL_image: %s", SDL_GetError());
+	// 	return false;
+	// }
 	
 	LoadData();
 
