@@ -14,6 +14,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeCInformation.cmake"
   "/opt/homebrew/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeCXXInformation.cmake"
   "/opt/homebrew/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
+  "/opt/homebrew/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
   "/opt/homebrew/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeGenericSystem.cmake"
   "/opt/homebrew/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeInitializeConfigs.cmake"
   "/opt/homebrew/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeLanguageInformation.cmake"
@@ -24,6 +25,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/Cellar/cmake/3.28.1/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/opt/homebrew/Cellar/cmake/3.28.1/share/cmake/Modules/Compiler/Clang.cmake"
   "/opt/homebrew/Cellar/cmake/3.28.1/share/cmake/Modules/Compiler/GNU.cmake"
+  "/opt/homebrew/Cellar/cmake/3.28.1/share/cmake/Modules/ExternalProject/shared_internal_commands.cmake"
+  "/opt/homebrew/Cellar/cmake/3.28.1/share/cmake/Modules/FeatureSummary.cmake"
+  "/opt/homebrew/Cellar/cmake/3.28.1/share/cmake/Modules/FetchContent.cmake"
   "/opt/homebrew/Cellar/cmake/3.28.1/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake"
   "/opt/homebrew/Cellar/cmake/3.28.1/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake"
   "/opt/homebrew/Cellar/cmake/3.28.1/share/cmake/Modules/Platform/Apple-Clang-C.cmake"
@@ -32,6 +36,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/Cellar/cmake/3.28.1/share/cmake/Modules/Platform/Darwin-Initialize.cmake"
   "/opt/homebrew/Cellar/cmake/3.28.1/share/cmake/Modules/Platform/Darwin.cmake"
   "/opt/homebrew/Cellar/cmake/3.28.1/share/cmake/Modules/Platform/UnixPaths.cmake"
+  "/opt/homebrew/lib/cmake/SDL2/sdl2-config-version.cmake"
+  "/opt/homebrew/lib/cmake/SDL2/sdl2-config.cmake"
+  "/opt/homebrew/lib/cmake/SDL2_image/sdl2_image-config-version.cmake"
+  "/opt/homebrew/lib/cmake/SDL2_image/sdl2_image-config.cmake"
+  "/opt/homebrew/lib/cmake/SDL2_ttf/sdl2_ttf-config-version.cmake"
+  "/opt/homebrew/lib/cmake/SDL2_ttf/sdl2_ttf-config.cmake"
   )
 
 # The corresponding makefile is:
