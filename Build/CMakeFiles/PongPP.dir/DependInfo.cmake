@@ -14,15 +14,11 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/zd1420/Documents/Game dev/PongPP/src/Ball.cpp" "CMakeFiles/PongPP.dir/src/Ball.cpp.o" "gcc" "CMakeFiles/PongPP.dir/src/Ball.cpp.o.d"
   "/Users/zd1420/Documents/Game dev/PongPP/src/Component.cpp" "CMakeFiles/PongPP.dir/src/Component.cpp.o" "gcc" "CMakeFiles/PongPP.dir/src/Component.cpp.o.d"
   "/Users/zd1420/Documents/Game dev/PongPP/src/Cust_Math.cpp" "CMakeFiles/PongPP.dir/src/Cust_Math.cpp.o" "gcc" "CMakeFiles/PongPP.dir/src/Cust_Math.cpp.o.d"
-  "/Users/zd1420/Documents/Game dev/PongPP/src/DialogBox.cpp" "CMakeFiles/PongPP.dir/src/DialogBox.cpp.o" "gcc" "CMakeFiles/PongPP.dir/src/DialogBox.cpp.o.d"
-  "/Users/zd1420/Documents/Game dev/PongPP/src/Font.cpp" "CMakeFiles/PongPP.dir/src/Font.cpp.o" "gcc" "CMakeFiles/PongPP.dir/src/Font.cpp.o.d"
   "/Users/zd1420/Documents/Game dev/PongPP/src/Game.cpp" "CMakeFiles/PongPP.dir/src/Game.cpp.o" "gcc" "CMakeFiles/PongPP.dir/src/Game.cpp.o.d"
   "/Users/zd1420/Documents/Game dev/PongPP/src/Main.cpp" "CMakeFiles/PongPP.dir/src/Main.cpp.o" "gcc" "CMakeFiles/PongPP.dir/src/Main.cpp.o.d"
   "/Users/zd1420/Documents/Game dev/PongPP/src/Paddle.cpp" "CMakeFiles/PongPP.dir/src/Paddle.cpp.o" "gcc" "CMakeFiles/PongPP.dir/src/Paddle.cpp.o.d"
   "/Users/zd1420/Documents/Game dev/PongPP/src/PaddleSpriteComponent.cpp" "CMakeFiles/PongPP.dir/src/PaddleSpriteComponent.cpp.o" "gcc" "CMakeFiles/PongPP.dir/src/PaddleSpriteComponent.cpp.o.d"
-  "/Users/zd1420/Documents/Game dev/PongPP/src/PauseMenu.cpp" "CMakeFiles/PongPP.dir/src/PauseMenu.cpp.o" "gcc" "CMakeFiles/PongPP.dir/src/PauseMenu.cpp.o.d"
   "/Users/zd1420/Documents/Game dev/PongPP/src/SpriteComponent.cpp" "CMakeFiles/PongPP.dir/src/SpriteComponent.cpp.o" "gcc" "CMakeFiles/PongPP.dir/src/SpriteComponent.cpp.o.d"
-  "/Users/zd1420/Documents/Game dev/PongPP/src/UIScreen.cpp" "CMakeFiles/PongPP.dir/src/UIScreen.cpp.o" "gcc" "CMakeFiles/PongPP.dir/src/UIScreen.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

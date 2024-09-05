@@ -4,9 +4,9 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.1/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I"/Users/zd1420/Documents/Game dev/PongPP/include"
+CXX_INCLUDES = -I"/Users/zd1420/Documents/Game dev/PongPP/include" -isystem /opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_image/2.8.2_1/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2
 
-CXX_FLAGSarm64 = -g -std=gnu++14 -arch arm64
+CXX_FLAGSarm64 = -g -std=gnu++14 -arch arm64 -fPIE
 
-CXX_FLAGS = -g -std=gnu++14 -arch arm64
+CXX_FLAGS = -g -std=gnu++14 -arch arm64 -fPIE
 

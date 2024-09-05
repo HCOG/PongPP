@@ -273,54 +273,6 @@ src/Cust_Math.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/Cust_Math.cpp.s
 .PHONY : src/Cust_Math.cpp.s
 
-src/DialogBox.o: src/DialogBox.cpp.o
-.PHONY : src/DialogBox.o
-
-# target to build an object file
-src/DialogBox.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/DialogBox.cpp.o
-.PHONY : src/DialogBox.cpp.o
-
-src/DialogBox.i: src/DialogBox.cpp.i
-.PHONY : src/DialogBox.i
-
-# target to preprocess a source file
-src/DialogBox.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/DialogBox.cpp.i
-.PHONY : src/DialogBox.cpp.i
-
-src/DialogBox.s: src/DialogBox.cpp.s
-.PHONY : src/DialogBox.s
-
-# target to generate assembly for a file
-src/DialogBox.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/DialogBox.cpp.s
-.PHONY : src/DialogBox.cpp.s
-
-src/Font.o: src/Font.cpp.o
-.PHONY : src/Font.o
-
-# target to build an object file
-src/Font.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/Font.cpp.o
-.PHONY : src/Font.cpp.o
-
-src/Font.i: src/Font.cpp.i
-.PHONY : src/Font.i
-
-# target to preprocess a source file
-src/Font.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/Font.cpp.i
-.PHONY : src/Font.cpp.i
-
-src/Font.s: src/Font.cpp.s
-.PHONY : src/Font.s
-
-# target to generate assembly for a file
-src/Font.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/Font.cpp.s
-.PHONY : src/Font.cpp.s
-
 src/Game.o: src/Game.cpp.o
 .PHONY : src/Game.o
 
@@ -417,30 +369,6 @@ src/PaddleSpriteComponent.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/PaddleSpriteComponent.cpp.s
 .PHONY : src/PaddleSpriteComponent.cpp.s
 
-src/PauseMenu.o: src/PauseMenu.cpp.o
-.PHONY : src/PauseMenu.o
-
-# target to build an object file
-src/PauseMenu.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/PauseMenu.cpp.o
-.PHONY : src/PauseMenu.cpp.o
-
-src/PauseMenu.i: src/PauseMenu.cpp.i
-.PHONY : src/PauseMenu.i
-
-# target to preprocess a source file
-src/PauseMenu.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/PauseMenu.cpp.i
-.PHONY : src/PauseMenu.cpp.i
-
-src/PauseMenu.s: src/PauseMenu.cpp.s
-.PHONY : src/PauseMenu.s
-
-# target to generate assembly for a file
-src/PauseMenu.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/PauseMenu.cpp.s
-.PHONY : src/PauseMenu.cpp.s
-
 src/SpriteComponent.o: src/SpriteComponent.cpp.o
 .PHONY : src/SpriteComponent.o
 
@@ -464,30 +392,6 @@ src/SpriteComponent.s: src/SpriteComponent.cpp.s
 src/SpriteComponent.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/SpriteComponent.cpp.s
 .PHONY : src/SpriteComponent.cpp.s
-
-src/UIScreen.o: src/UIScreen.cpp.o
-.PHONY : src/UIScreen.o
-
-# target to build an object file
-src/UIScreen.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/UIScreen.cpp.o
-.PHONY : src/UIScreen.cpp.o
-
-src/UIScreen.i: src/UIScreen.cpp.i
-.PHONY : src/UIScreen.i
-
-# target to preprocess a source file
-src/UIScreen.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/UIScreen.cpp.i
-.PHONY : src/UIScreen.cpp.i
-
-src/UIScreen.s: src/UIScreen.cpp.s
-.PHONY : src/UIScreen.s
-
-# target to generate assembly for a file
-src/UIScreen.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongPP.dir/build.make CMakeFiles/PongPP.dir/src/UIScreen.cpp.s
-.PHONY : src/UIScreen.cpp.s
 
 # Help Target
 help:
@@ -516,12 +420,6 @@ help:
 	@echo "... src/Cust_Math.o"
 	@echo "... src/Cust_Math.i"
 	@echo "... src/Cust_Math.s"
-	@echo "... src/DialogBox.o"
-	@echo "... src/DialogBox.i"
-	@echo "... src/DialogBox.s"
-	@echo "... src/Font.o"
-	@echo "... src/Font.i"
-	@echo "... src/Font.s"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
@@ -534,15 +432,9 @@ help:
 	@echo "... src/PaddleSpriteComponent.o"
 	@echo "... src/PaddleSpriteComponent.i"
 	@echo "... src/PaddleSpriteComponent.s"
-	@echo "... src/PauseMenu.o"
-	@echo "... src/PauseMenu.i"
-	@echo "... src/PauseMenu.s"
 	@echo "... src/SpriteComponent.o"
 	@echo "... src/SpriteComponent.i"
 	@echo "... src/SpriteComponent.s"
-	@echo "... src/UIScreen.o"
-	@echo "... src/UIScreen.i"
-	@echo "... src/UIScreen.s"
 .PHONY : help
 
 

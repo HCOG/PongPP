@@ -5,7 +5,7 @@
 #include "BGSpriteComponent.h"
 #include "Paddle.h"
 #include "Ball.h"
-#include "UI.h"
+
 using namespace std;
 
 //The default constructor will first set member variables to nullptr and IsRunning to true
