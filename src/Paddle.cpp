@@ -17,7 +17,7 @@ Paddle::Paddle(Game* game,int playernum)
 	// Create an paddle sprite component
 	PaddleSpriteComponent* asc = new PaddleSpriteComponent(this);
 	SDL_Texture* texture = {
-		game->GetTexture("../Assets/Paddle.png")
+		game->GetTexture("../../../Assets/Paddle.png")
 	};
 	asc->SetTexture(texture);
 	asc->SetTexHeight(H);

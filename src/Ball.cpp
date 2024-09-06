@@ -13,10 +13,10 @@ Ball::Ball(Game* game, Paddle& LPaddle, Paddle& RPaddle)
 	// Create an paddle sprite component
     SpriteComponent* asc = new SpriteComponent(this,200);
 	SDL_Texture* texture = {
-		game->GetTexture("../Assets/Ball.png")
+		game->GetTexture("../../../Assets/Ball.png")
 	};
     SetRadius(20.f);
-    SetSpeed(400.f);
+    SetSpeed(200.f);
     SetDirection(Vector2::Normalize(Vector2(1.f, 0.f)));
 
     asc->SetTexture(texture);

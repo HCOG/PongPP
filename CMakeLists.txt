@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.28)
+cmake_minimum_required(VERSION 3.8)
 project(PongPP)
 
 set(CMAKE_CXX_STANDARD 14)
@@ -62,4 +62,22 @@ set(SOURCES
 # Add an executable target
 add_executable(PongPP ${SOURCES})
 
-target_link_libraries(PongPP SDL2::SDL2 SDL2::SDL2main SDL2_image::SDL2_image SDL2_ttf::SDL2_ttf) 
+target_link_libraries(PongPP SDL2::SDL2 SDL2::SDL2main SDL2_image::SDL2_image SDL2_ttf::SDL2_ttf)
+
+# Copy SDL2.dll or SDL2d.dll to the output directory after build
+add_custom_command(TARGET PongPP POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "$<TARGET_FILE_DIR:SDL2::SDL2>/SDL2$<$<CONFIG:Debug>:d>.dll"
+        $<TARGET_FILE_DIR:PongPP>)
+
+# Copy SDL2_image.dll or SDL2_imaged.dll to the output directory after build
+add_custom_command(TARGET PongPP POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "$<TARGET_FILE_DIR:SDL2_image::SDL2_image>/SDL2_image$<$<CONFIG:Debug>:d>.dll"
+        $<TARGET_FILE_DIR:PongPP>)
+
+# Copy SDL2_ttf.dll or SDL2_ttfd.dll to the output directory after build
+add_custom_command(TARGET PongPP POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "$<TARGET_FILE_DIR:SDL2_ttf::SDL2_ttf>/SDL2_ttf$<$<CONFIG:Debug>:d>.dll"
+        $<TARGET_FILE_DIR:PongPP>)

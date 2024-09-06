@@ -39,6 +39,8 @@ public:
     void SetNextCenter(Vector2 NextCenter) { SBB.NC = NextCenter; }
     void SetRadius(float Radius) { SBB.R = Radius; }
 
+    void PickUpLPaddle(Paddle& Paddle) { LPaddle = Paddle; }
+    void PickUpRPaddle(Paddle& Paddle) { RPaddle = Paddle; }
 private:
     Velocity V;                     //The velocity of the ball
 	SphericBB SBB;		            //The capsule bound box for ball

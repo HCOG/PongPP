@@ -251,7 +251,7 @@ public:
 	static Vector2 RotateAroundPoint(Vector2 point, Vector2 center, float angle) 
 	{
     // Convert angle to radians
-    float rad = angle * M_PI / 180.0f;
+    float rad = angle *  3.1415926 / 180.0f;
 
     // Translate point back to the origin
     point.x -= center.x;
